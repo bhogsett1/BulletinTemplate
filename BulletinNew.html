@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando Winter Bulletin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css"  media="screen" rel="stylesheet">
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" defer></script>
+
+
+    <!--This script controls the attributes of the image popover for the results-->
+    <script>
+        var options = {
+            placement: function (context, source) {
+                var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+
+                if (width < 515) {
+                    return "top";
+                } else {
+                    return "auto right";
+                }
+            },
+            trigger: "hover",
+            html: true
+        };
+
+        jQuery(document).ready(function ($) {
+            $('*.player').popover(options);
+            $('*[rel=popover]').popover(options);
+            $('*[rel=tooltip]').tooltip({html: true});
+        });
+    </script>
+    <style>
+        /*        @media (max-width: 480px) {
+                    body {
+                        font-size: 13px;
+                        width: 90%;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                    }
+
+                    .hidden-phone {
+                        display: block;
+                    }
+                }*/
+        p {
+            margin-top: 0; margin-bottom: 0; page-break-after: avoid;
+        }
+        /*        Color Palette from http://www.awwwards.com/web-design-awards/creations-namale*/
+        body {
+            background-color: #f2efe8;
+            color: black;
+            font-family: -apple-system, "SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            padding-top: 0;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            line-height: 1.8em;
+
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: none;
+            padding: 0px;
+        }
+
+        th{
+            text-align: center;
+        }
+
+        table.header {
+            /*            margin-bottom: 0px;*/
+            background: #c5d5cb;
+        }
+
+        .header td{
+            padding: 1%;
+        }
+
+        .banner{
+            width: 100%;
+        }
+        .events {
+            width: 50%;
+            vertical-align: top;
+            border: none;
+        }
+        .events th {
+            font-size: 18px;
+            text-align: center;
+
+        }
+
+        .events td:first-child {
+            white-space: nowrap;
+            vertical-align: top;
+            /*            padding-right: .1in;*/
+        }
+        .events:nth-child(2) {
+            /*            border-left: .04in solid black;*/
+            /*            padding-left: .25in;*/
+        }
+        .events table em {
+            display: block;
+        }
+        .large
+        /*        .small */
+        {
+            width:100%;
+            /*            margin-bottom: 5px;*/
+            /*border: 1px solid black;*/
+        }
+
+        .large td {
+            text-align: center;
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            padding: 5px;
+        }
+
+        .large thead {
+            background-color: #c5d5cb;
+            color: black;
+        }
+
+        .large.bracket td {
+            padding: 0px;
+        }
+
+        .large tbody tr:first-child td,
+        .large tr.tie td {
+            font-weight: bold;
+        }
+
+        .small th u {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .large tbody td
+        {
+            text-align: left;
+        }
+
+        /*     .large.bracket th:nth-child(3),
+                   .small th:nth-child(4),
+            .small tbody td:nth-child(4)
+            {
+                text-align: left;
+
+            }
+        */
+
+
+        .small td {
+            /*            vertical-align: top;*/
+            /*            font-size: 14px;
+            text-align: left; */
+
+        }
+
+        /*        .small th,
+                .small td {
+                              padding: 0 .1in;
+                }*/
+
+        /*        .small th {
+                    text-align: center;
+                }*/
+        .ad {
+
+            margin: 0 auto;
+            display: block;
+            border: none;
+        }
+
+        table.large
+        {
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            margin-top: 10px;
+
+        }
+
+
+        table.small td{
+            font-size: 14px;
+        }
+
+        .large th{
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        table.large td, table.large th{
+            text-align: center;
+
+        }
+
+        table.large td:last-child,
+        table.large td:nth-child(5){
+            text-align: left;
+        }
+
+        table.large td:nth-child(6)
+
+        {
+            text-align: center
+        }
+
+        .large span{
+            font-size: smaller;
+            font-style:italic;
+        }
+
+        table.small{
+            width:100%;
+            border-color: #00628B;
+            border-width: thin;
+            border-style: solid;
+            border: 0;
+            margin-top: 10px;
+        }
+
+        .small th{
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            text-align: center;
+            text-decoration: underline;
+            background: #d5cbc5;
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            border-collapse: collapse;
+        }
+
+        /*        .small th {
+                    display: block;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-decoration: underline;
+                    text-align: center;
+                }*/
+
+        table.section{
+            background: #c5d5cb;
+            width:100%;
+            /*            padding: 0px;
+                        margin: 0px;
+                        margin-bottom: 0px;
+                        border-collapse: collapse;*/
+        }
+
+        /*        .section td:first-child,
+                .section td:nth-child(2),
+                .section td:nth-child(3),
+                .section td:nth-child(5) {
+                    text-align: center;
+                }*/
+
+        .section td:first-child,
+        .section td:nth-child(2),
+        .section td:nth-last-child(1)
+
+        {
+            text-align: center;
+            padding: 5px;
+            vertical-align: middle;
+        }
+
+        .section td:nth-child(3),
+        .section td:nth-child(4)
+        {
+            padding: 5px;
+            vertical-align: middle;
+        }
+
+        .section th{
+            padding: 0px;
+            background: #c5d5cb;
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            margin: 0px;
+            vertical-align: middle;
+
+            text-decoration: none;
+            font-size: 14px;
+
+
+
+        }
+
+        .section td{
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            margin: 0px;
+            padding: 0px;
+            vertical-align: middle;
+
+        }
+        .small td{
+            padding: 0px;
+            border-collapse: collapse;
+            vertical-align: middle;
+        }
+
+        table.photosBox{
+            background: #c5d5cb;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            /*            border-color: red;
+                        border-width: thin;
+                        border-style: solid;*/
+        }
+
+        .photosBox td, th, thead{
+            text-align: center;
+        }
+
+        /*        .photosBox{
+                    text-align: center;
+                    font-size: 16px;
+                }*/
+
+        table.photos{
+            background: #c5d5cb;
+        }
+        .photos td{
+            text-align: center;
+        }
+
+        .photos th{
+            text-align: center;
+            font-size: 16px;
+        }
+
+
+        table.story{
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            border-spacing: 10px;
+            border: none;
+            line-height: 170%;
+            font-size: larger;
+            background-color: white;
+        }
+        .story td{
+            text-align: left;
+            vertical-align: top;
+
+            padding: 20px;
+            border-spacing: 10px;
+        }
+        td.storyTitle{
+            font-size: larger;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        p.title{
+            font-size: larger;
+            font-weight: bold;
+            text-align: center;
+        }
+        .weather{
+            margin: 0 auto;
+        }
+
+        .storyImages{
+            /*            background: #e3e0cf;*/
+            width:100%;
+            border: none;
+
+        }
+
+        td270{
+            text-align: center;
+            vertical-align: top;
+            padding: 0;
+            width: '270px';
+        }
+
+        .today, .tomor, .masterpoints{
+            border: none;
+            font-size: larger;
+        }
+
+        .today td.hospitalityHeader, .tomor td.hospitalityHeader{
+            font-size: 140%;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        .today th.hospitality, .tomor th.hospitality{
+            font-size: 110%;
+            font-weight: bold;
+            text-align: center;
+            border: none
+
+        }
+
+        .goodwill h1{
+            color: darkgreen;
+        }
+
+        .tdBlue{
+            color: blue;
+        }
+
+        large.td left{
+            text-align: left;
+            border: 1px solid red;
+            background: blue;
+        }
+
+        table.events{
+            width:100%;
+            border-color: black;
+            border-width: medium;
+            border-style: solid;
+            font-size: larger;
+        }
+        .img.center {
+            display: block;
+            margin: 0 auto;
+        }
+        a .img{
+            border: none;
+            display: block;
+            margin: 0 auto;
+        }
+        img{
+            border: none;
+        }
+        .table-striped>tbody>tr:nth-child(odd)>td,
+        .table-striped>tbody>tr:nth-child(odd)>th {
+            background-color: #e3e0cf;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        hr.stylehr {
+            border-top: 3px double #8c8b8b;
+            width:100%
+        }
+
+        hr.stylehrBold {
+            border-top: 5px double #8c8b8b;
+            width:100%
+        }
+
+        .center-table, center-block
+        {
+            margin: 0 auto !important;
+            float: none !important;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        h1.crop, h2.crop, h3.crop{
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            -o-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .NLM{
+            color:red;
+            text-align: center;
+        }
+
+        div.newLifeMaster, div.goodwill, div.overall, div.section, td.quoteTD {
+            background-color: #eafde5;
+        }
+
+        div.weather, div.goodwill, div.quote{
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navbar-custom {
+            background-color: #c5d5cb;
+            border-color: #98d7d7;
+            background-image: -webkit-gradient(linear, left 0%, left 100%, from(#d5eeee), to(#c5d5cb));
+            background-image: -webkit-linear-gradient(top, #d5eeee, 0%, #c5d5cb, 100%);
+            background-image: -moz-linear-gradient(top, #d5eeee 0%, #c5d5cb 100%);
+            background-image: linear-gradient(to bottom, #d5eeee 0%, #c5d5cb 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd5eeee', endColorstr='#ffb0e0e0', GradientType=0);
+        }
+        .navbar-custom .navbar-brand {
+            color: #190303;
+        }
+        .navbar-custom .navbar-brand:hover,
+        .navbar-custom .navbar-brand:focus {
+            color: #000000;
+            background-color: transparent;
+        }
+
+        .navbar-custom .navbar-text {
+            color: #190303;
+        }
+
+        .navbar-custom .navbar-nav > li:last-child > a {
+            border-right: 1px solid #98d7d7;
+        }
+        .navbar-custom .navbar-nav > li > a {
+            color: red;
+            border-left: 1px solid #98d7d7;
+        }
+
+        .navbar-custom .navbar-nav > li > a:hover,
+        .navbar-custom .navbar-nav > li > a:focus {
+            color: green;
+            background-color: transparent;
+        }
+
+        .navbar-custom .navbar-nav > .active > a,
+        .navbar-custom .navbar-nav > .active > a:hover,
+        .navbar-custom .navbar-nav > .active > a:focus {
+            color: #c0c0c0;
+            background-color: #98d7d7;
+            background-image: -webkit-gradient(linear, left 0%, left 100%, from(#98d7d7), to(#bde5e5));
+            background-image: -webkit-linear-gradient(top, #98d7d7, 0%, #bde5e5, 100%);
+            background-image: -moz-linear-gradient(top, #98d7d7 0%, #bde5e5 100%);
+            background-image: linear-gradient(to bottom, #98d7d7 0%, #bde5e5 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff98d7d7', endColorstr='#ffbde5e5', GradientType=0);
+        }
+
+        .navbar-custom .navbar-nav > .disabled > a,
+        .navbar-custom .navbar-nav > .disabled > a:hover,
+        .navbar-custom .navbar-nav > .disabled > a:focus {
+            color: #cccccc;
+            background-color: transparent;
+        }
+
+        .navbar-custom .navbar-toggle {
+            border-color: grey;
+        }
+
+        .navbar-custom .navbar-toggle:hover,
+        .navbar-custom .navbar-toggle:focus {
+            background-color: #dddddd;
+        }
+
+        .navbar-custom .navbar-toggle .icon-bar {
+            background-color: darkblue;
+        }
+        .navbar-custom .navbar-collapse,
+        .navbar-custom .navbar-form {
+            border-color: #96d6d6;
+        }
+
+        .navbar-custom .navbar-nav > .dropdown > a:hover .caret,
+        .navbar-custom .navbar-nav > .dropdown > a:focus .caret {
+            border-top-color: #c0c0c0;
+            border-bottom-color: #c0c0c0;
+        }
+
+        .navbar-custom .navbar-nav > .open > a,
+        .navbar-custom .navbar-nav > .open > a:hover,
+        .navbar-custom .navbar-nav > .open > a:focus {
+            background-color: #98d7d7;
+            color: #c0c0c0;
+        }
+
+        .navbar-custom .navbar-nav > .open > a .caret,
+        .navbar-custom .navbar-nav > .open > a:hover .caret,
+        .navbar-custom .navbar-nav > .open > a:focus .caret {
+            border-top-color: #c0c0c0;
+            border-bottom-color: #c0c0c0;
+        }
+
+        .navbar-custom .navbar-nav > .dropdown > a .caret {
+            border-top-color: #190303;
+            border-bottom-color: #190303;
+        }
+
+        @media (max-width: 767) {
+            .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+                color: #190303;
+            }
+            .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+            .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+                color: #c0c0c0;
+                background-color: transparent;
+            }
+            .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+            .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+            .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+                color: #c0c0c0;
+                background-color: #98d7d7;
+            }
+            .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+            .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+            .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+                color: #cccccc;
+                background-color: transparent;
+            }
+            body{
+                width: 100%;
+            }
+        }
+
+        .navbar-custom .navbar-link {
+            color: #190303;
+        }
+
+        .navbar-custom .navbar-link:hover {
+            color: #c0c0c0;
+        }
+
+        /* centered columns styles */
+        .row-centered {
+            text-align:center;
+        }
+
+        /*https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/*/
+        blockquote {
+            background: #f9f9f9;
+            /*  border-left: 10px solid #ccc;
+              margin: 1.5em 10px;
+              padding: 0.5em 10px; */
+            quotes: "\201C""\201D""\2018""\2019";
+        }
+
+        blockquote p {
+            display: inline;
+            font-size: 200%;
+            text-align:justify;
+            color: darkred;
+            line-height: 1.2em;
+        }
+
+        .popover {
+            position: absolute;
+            placement: top;
+            top: 0;
+            left: 0;
+            z-index: 1010;
+            display: none;
+            max-width: 276px;
+            padding: 1px;
+            text-align: left;
+            white-space: normal;
+            background-color: #f2efe8;
+            border: 1px solid #cccccc;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            background-clip: padding-box;
+            -webkit-bg-clip: padding-box;
+            -moz-bg-clip: padding;
+        }
+
+        .popover-title {
+            padding: 8px 14px;
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 18px;
+            background-color: #c5d5cb;
+            border-bottom: 1px solid #ebebeb;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+        }
+
+        .popover-content {
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+
+        .popover-content img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*        @media (max-width: 978px) {
+                    .container {
+                        padding:0px;
+                        margin:0px;
+                    }
+
+                    body {
+                        padding:0;
+                    }
+
+                    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+                        margin-left: 0;
+                        margin-right: 0;
+                        margin-bottom:0;
+                    }
+                }*/
+        table.responsive, table.condensed, table.striped{
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a.player{
+            color:black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        .story{
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            border-spacing: 10px;
+            border: 1;
+            line-height: 170%;
+            font-size: larger;
+            background-color: white;
+            width:90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .storyBody, topPhotoRow, bottomPhotoRow{
+            text-align: left;
+            vertical-align: top;
+            padding: 20px;
+            border-spacing: 10px;
+        }
+
+
+        .storyTitle{
+
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .storyImages{
+            border: none;
+            margin-bottom: 0px;
+            padding: 0px;
+
+        }
+        .byline{
+            text-align: center;
+            font-style:italic;
+            font-size: smaller;
+            color: blue;
+        }
+        .photoCaption, div.ph{
+            text-align: center;
+            font-weight: bold;
+            margin-top: 0px;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            var bottomCount = 0;
+            var topCount = 0;
+
+            $("[id^=columnBottomPhoto]").each(function () {
+
+                if ($(this).attr('src') == "")
+                {
+                    bottomCount = bottomCount + 1;
+                    alert("Found it and the bottomCount is " + bottomCount);
+                }
+            });
+
+
+
+
+            switch (bottomCount) {
+                case 3:
+                    //        No Pictures
+                    $("#columnBottomPhoto1").empty();
+                    $("#columnBottomPhoto2").empty();
+                    $("#columnBottomPhoto3").empty();
+
+                    break;
+                case 2:
+                    //        One Picture
+                    $("#columnBottomPhoto2").empty();
+                    $("#columnBottomPhoto3").empty();
+                    $("#columnBottomPhoto1").removeClass("col-sm-4");
+                    $("#columnBottomPhoto1").addClass("col-sm-12");
+                    break;
+
+                case 1:
+                    //         Two Pictures
+                    $("#columnBottomPhoto3").empty();
+                    $("#columnBottomPhoto1").removeClass("col-sm-4");
+                    $("#columnBottomPhoto1").addClass("col-sm-6");
+                    $("#columnBottomPhoto2").removeClass("col-sm-4");
+                    $("#columnBottomPhoto2").addClass("col-sm-6");
+                    break;
+                default:
+                    //        Three Pictures
+                    break;
+            }
+
+
+            $("[id^=topPhoto]").each(function () {
+
+                if ($(this).attr('src') == "")
+                {
+                    topCount = topCount + 1;
+                    alert("Found it and gthe topCount is " + topCount);
+                }
+            });
+
+
+            if (topCount == '2') {
+                $("#topPhoto2Column").empty();
+                $("#topPhoto3Column").empty();
+                $("#topPhoto1Column").removeClass("col-sm-4");
+                $("#topPhoto1Column").addClass("col-sm-12");
+            }
+
+
+            switch (topCount) {
+                case 3:
+                    //        No Pictures
+                    $("#topPhoto1Column").empty();
+                    $("#topPhoto2Column").empty();
+                    $("#topPhoto3Column").empty();
+
+                    break;
+                case 2:
+                    //        One Picture
+                    $("#topPhoto2Column").empty();
+                    $("#topPhoto3Column").empty();
+                    $("#topPhoto1Column").removeClass("col-sm-4");
+                    $("#topPhoto1Column").addClass("col-sm-12");
+                    break;
+
+                case 1:
+                    //         Two Pictures
+                    $("#topPhoto3Column").empty();
+                    $("#topPhoto1Column").removeClass("col-sm-4");
+                    $("#topPhoto1Column").addClass("col-sm-6");
+                    $("#topPhoto2Column").removeClass("col-sm-4");
+                    $("#topPhoto2Column").addClass("col-sm-6");
+                    break;
+                default:
+                    //        Three Pictures
+                    break;
+            }
+
+
+
+        });
+    </script>
+</head>
+<body>
+
+    <div class="col-sm-12">
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><a class="navbar-brand" href="http://www.acbl.org/tournaments/schedule.php?tourid=14987">Orlando Winter</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li id="flyer"><a href="http://web2.acbl.org/Tournaments/Ads/2016/01/1601010.pdf">Tournament Flyer</a></li>
+                        <li id="live"><a tabindex="-1" href="http://live.acbl.org/events/R1601010">ACBL Live Results</a></li>
+                        <li id="FR"><a tabindex="-1" href="http://www.bridgefinesse.com/FastResults/D9/#">Fast Results</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="container-fluid">
+
+        <!--Banner-->
+        <div class="banner">
+            <img id="banner" class ="center-block img-responsive" src="http://www.bridgefinesse.com/D9/Regionals/1601010/Banner.png" alt = "Banner"> <br>
+        </div>
+
+        <!--Header-->
+        <div class="row">
+            <table class="header table-responsive">
+                <tr>
+                    <td>
+                        <h3 id="date"> Tuesday, January 5, 2016</h3>
+                    </td>
+                    <td  class="text-right">
+                        <h3 id="location">Lake Buena Vista, FL</h3>
+                    </td>
+                </tr>
+            </table >
+        </div>
+
+        <!--Events-->
+        <div class="table-responsive">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <table class="today table-responsive table-striped table-condensed">
+
+
+
+                        <thead>
+
+                            <tr>
+                                <th colspan="2"> Today's Events</th>
+                            </tr>
+                        </thead>
+                        <tbody id="todaySchedule">
+                            <tr><td> 9AM,1&7PM </td><td> Bracketed Open KOs (2, 3&4 of 4) </td></tr>
+                            <tr><td> 9AM </td><td> I/N Pairs 50/100/300  </td></tr>
+                            <tr><td> 9:30AM </td><td> Morning Fast Pairs Series (1 of 5) </td></tr>
+                            <tr><td> 10AM & 3PM </td><td> Stratified Senior Pairs (1&2 of 2) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> A/X/Y Stratified Open Pairs (1&2 of 2) </td></tr>
+                            <tr><td> 1PM </td><td> I/N Pairs 50/100/300  </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Orange Blossom Gold Point Pairs (1&2 of 2) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Side Game Series I (1&2 of 5) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Tuesday-Wednesday Bracketed KOs (1&2 of 4) </td></tr>
+                            <tr><td> 7PM </td><td> I/N Pairs 50/100/300  </td></tr>
+                            <tr><td> 7PM </td><td> Stratified Open Swiss  </td></tr>
+                        </tbody>
+                    </table>
+
+                    <table id="today_HospitalityTable" class="today table striped table-condensed">
+
+
+
+                        <thead>
+                            <tr>
+                                <th class="hospitality" colspan="1">Hospitality</th>
+                            </tr>
+                        </thead>
+                        <tbody id="today_hospitality">
+
+                        </tbody>
+                    </table>
+
+                    <br>
+
+
+
+                </div>
+
+
+                <div class="col-sm-12 col-md-6  col-lg-6">
+                    <table class="tomor table-responsive table-striped table-condensed">
+
+
+
+                        <thead>
+                            <tr>
+                                <th colspan="2">Tomorrow's Events</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tomorrowSchedule">
+                            <tr><td> 9AM </td><td> Compact KOs I (1 of 2) </td></tr>
+                            <tr><td> 9AM </td><td> I/N Pairs 50/100/300  </td></tr>
+                            <tr><td> 9:30AM </td><td> Morning Fast Pairs Series (2 of 5) </td></tr>
+                            <tr><td> 10AM & 3PM </td><td> Stratified Senior Pairs (1&2 of 2) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> A/X/Y Stratified Open Pairs (1&2 of 2) </td></tr>
+                            <tr><td> 1PM </td><td> I/N Pairs 50/100/300  </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Orange Blossom Gold Point Pairs (1&2 of 2) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Side Game Series I (3, 4 of 5) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Tuesday-Wednesday Bracketed KOs (3&4 of 4) </td></tr>
+                            <tr><td> 1:00 & 7:00 </td><td> Wednesday-Thursday Bracketed KOs (1&2 of 4) </td></tr>
+                            <tr><td> 7PM </td><td> I/N Pairs 50/100/300  </td></tr>
+                            <tr><td> 7PM </td><td> Stratified Open Swiss  </td></tr>
+                        </tbody>
+                    </table>
+
+
+                    <table id="tomorrow_HospitalityTable" class="tomor table striped table-condensed">
+
+
+
+                        <thead>
+                            <tr>
+
+                                <th class="hospitality" colspan="1">Hospitality</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tomorrow_Hospitality">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--New lIfe Master-->
+        <div class="table-responsive">
+            <div class="row">
+                <div id="newLifeMaster" class="newLifeMaster"></div>
+            </div>
+        </div>
+
+        <!--Weather-->
+        <div class="table-responsive">
+            <div id="weather">
+                <div class="row">
+                    <div class="weather">
+                        <a href="http://www.weatherforyou.com/reports/index.php?config=&forecast=zandh&pands=Lake%20Buena%20Vista%2C%20FL&Submit=Get+Weather">
+                            <img src="http://www.weatherforyou.net/fcgi-bin/hw3/hw3.cgi?config=png&forecast=zone&alt=hwizone&place=Lake%20Buena%20Vista&state=FL&country=us&hwvbg=f2efe8&hwvtc=black&hwvdisplay=&daysonly=2&maxdays=4" width="300" height="200" alt="weather forecast"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--GoodWill-->
+        <div class="table-responsive">
+            <div class="row">
+                <div class="goodwill">
+                    <h2 class="crop">Goodwill Thought for the Day</h2>
+                    <div>
+                        <h1 id="Goodwill" class="crop">It is nice to be important but more important to be nice</h1>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Photo of the Day-->
+        <div class="table-responsive">
+
+            <h2>Photo of the Day</h2>
+
+            <p class="text-center">(Email suggested photos or Winner photos with <b>Names &amp; ACBL#s</b> to <a href="mailto:FastResultsHelpDesk@gmail.com?subject=Photos%20for%20D5%20Bulletin" >FastResultsHelpDesk@gmail.com</a>)</p>
+
+            <div id="photo_of_day_Div"></div>
+        </div>
+
+
+
+
+
+
+        <!--Story-->
+        <br><div id="story"><div id="D09160101020160105.1">
+
+                <table class="story">
+                    <tr>
+                        <td class="storyTitle">
+                            Greenspan 0-20 Lesson & Game &nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <p>Bruce Greenspan held another successful FREE lesson for any player with 0 - 20 points on Monday morning.
+                                Eight tables of players attended.  Bruce hosted a FREE game Monday afternoon for any of those persons interested.
+                                Bruce Greenspan, a Floridian, is a renowned teacher, player and District 9 Board Member.
+                                He continually donates his time and efforts on behalf of exciting new players and welcoming  them to the world of Duplicate Bridge.</p>
+
+                            <p></p>
+
+                            <p></p>
+
+                        </td>
+                    </tr>   <tr><td style="text-align:center;   vertical-align:top; width:270px">
+                            <table style="border-collapse:collapse; "><tr>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><img style="border-collapse:collapse; height=150px:" src="http://bridgefinesse.com/D9/Regionals/1601010/Photos/PDD09160101020160105.1_1.jpg" alt="image" ></td>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><img style="border-collapse:collapse; height=150px:" src="http://bridgefinesse.com/D9/Regionals/1601010/Photos/PDD09160101020160105.1_2.jpg" alt="image" ></td>
+
+                                <tr>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><b>Bruce with Students</b></td>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><b>Working Hard</b></td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>   </tr>
+
+                    <tr><td style="text-align:center;   vertical-align:top; width:270px"><br><i>Roving Reporter</i> </td></tr>
+
+
+                </table>
+
+
+
+            </div><br><br><div id="D09160101020160105.2">
+
+                <table class="story">
+
+                    <tr>
+                        <td style="text-align: center">
+                            Perry Poole Students Celebrate &nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td >
+                            <p>Dear Teach- <br><br>Hope we made you proud. Lorrie , Mimi, Sally, Carolyn, Judy, and I attended Bruce Greenspan's lecture this am.
+                                Joyce and Natalie were there too. Then all 8 of us played in the novice competition. Results: Mimi and Sally took first in EW and Carolyn and Lorrie were sixth.
+                                Judy and I took first in NS and Natalie and joyce took third. Judy and I had 63% losing to Mimi and Sally with 66% for the first place trophy.  Beginners luck?  Ya think!
+                                Thanks so much for all your guidance. We really appreciate all you do.</p>
+
+                            <p></p>
+
+                            <p></p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <table style="border-collapse:collapse; "><tr>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><img style="border-collapse:collapse; height=150px:" src="http://bridgefinesse.com/D9/Regionals/1601010/Photos/PDD09160101020160105.2_Photo1.jpg" alt="image" ></td>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><img style="border-collapse:collapse; height=150px:" src="http://bridgefinesse.com/D9/Regionals/1601010/Photos/PDD09160101020160105.2_Photo2.jpg" alt="image" ></td>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><img style="border-collapse:collapse; height=150px:" src="http://bridgefinesse.com/D9/Regionals/1601010/Photos/PDD09160101020160105.2_Photo3.jpg" alt="image" ></td></tr>
+                                <tr>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><b>Mimi Bergstedt - Sally Dearborn</b></td>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><b></b></td>
+                                    <td style="text-align:center; vertical-align:top; width:135px"><b>Judy OBrien - Dee Berglin</b></td>
+                                </tr>
+                                <tr><td colspan="3" style="text-align:center;   vertical-align:top;"><br><i>Dee and the Clermont gals</i> </td></tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!--                    <tr><td style="text-align:center;   vertical-align:top;"><br><i>Dee and the Clermont gals</i> </td></tr>-->
+
+
+                </table>
+
+            </div></div>
+
+
+        <!--Results-->
+        <div id="results" class="table-responsive">
+            <div class="overall">
+                <hr class="stylehr">
+                <h2>OVERALL RESULTS</h2>
+                <hr class="stylehr">
+            </div>
+
+            <div class="table-responsive">
+                <table class="photosBox table-responsive table-condensed">
+
+
+                    <thead>
+                        <tr>
+                            <th colspan="1" >
+                                Mon-Tues KO Bracket 1 - 2 of 2 (EVE)    &nbsp;&nbsp;&nbsp;<a href="http://bridgefinesse.com/ACBLLive/R1601010041A2KO.htm" target="_blank">FR Brackets</a>&nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/041A/2/results" target="_blank">Live Overalls</a>&nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/041A/2/recap" target="_blank">Live Recaps</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="photos table-responsive table-condensed">
+                                <tr>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/4079299.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/6172067.jpg" alt="image" height="150"></td>
+                                    <td>&nbsp;</td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/1916351.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/6841171.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/6739385.jpg" alt="image" height="150"></td>
+                                </tr>
+                                <tr>
+                                    <td><b><b>Jim Mahaffey</b></b></td>
+                                    <td><b><b>Sam Lev</b></b></td>
+                                    <td><b><b>Piotr Gawrys</b></b></td>
+                                    <td><b><b>Michal Klukowski</b></b></td>
+                                    <td><b><b>Drew Casen</b></b></td>
+                                    <td><b><b>James Krekorian</b></b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <!-- <a name="overall1">  -->
+            <div class="table-responsive">
+                <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                    <thead>
+                        <tr>
+                            <th>MPs</th>
+                            <th>Rnk</th>
+                            <th>Monday-Tuesday KO Bracket I - 2 of 2 (EVE)<span class="tablesPlayed">(14 Tables)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--                    <tr><td> </td> </td><td> </td><td> </td></tr>-->
+                        <tr >
+                            <td> 53.92 </td><td> 1 </td><td class="left">
+
+                                <a  data-toggle="popover" class="player"
+                                    data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4079299.jpg> <br><i>~17,660 MasterPoints</i>" data-original-title="Jim Mahaffey">Jim Mahaffey</a>, Winter Park, FL
+
+
+
+                                <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/6172067.jpg> <br><i>~13,666 MasterPoints</i>" data-original-title="Sam Lev">Sam Lev
+                                </strong> , New York, NY; <b>Piotr Gawrys</b> , Warsaw, Poland; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/1916351.jpg> <br><i>~10,973 MasterPoints</i>" data-original-title="Michal Klukowski">Michal Klukowski</strong> , Dolnoslaskie, Poland; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/6841171.jpg> <br><i>~18,338 MasterPoints</i>" data-original-title="Drew Casen">Drew Casen</strong> , Springfield, LA; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/6739385.jpg> <br><i>~25,108 MasterPoints</i>" data-original-title="James Krekorian">James Krekorian</strong> , Pensacola, FL
+                            </td>
+                        </tr>
+                        <tr><td> 37.74 </td><td> 2 </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/1621475.jpg> <br><i>~9,013 MasterPoints</i>" data-original-title="Stan Tulin">Stan Tulin</strong> - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/2022508.jpg> <br><i>~38,977 MasterPoints</i>" data-original-title="David Berkowitz">David Berkowitz</strong> , Boca Raton, FL; Jacek Kalita , Warsaw, Poland; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4819659.jpg> <br><i>~7,668 MasterPoints</i>" data-original-title="Michal Nowosadzki">Michal Nowosadzki</strong> , Wroclaw, Poland </td></tr>
+                        <tr><td> 21.57 </td><td> 3/4 </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5482658.jpg> <br><i>~68,764 MasterPoints</i>" data-original-title="Eric Rodwell">Eric Rodwell</strong> , Clearwater, FL; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4580699.jpg> <br><i>~80,829 MasterPoints</i>" data-original-title="Jeff Meckstroth">Jeff Meckstroth</strong> , Clearwater Bch, FL; Reanette Frobouck , Pittsburgh, PA; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/8086915.jpg> <br><i>~21,168 MasterPoints</i>" data-original-title="Allan Graves">Allan Graves</strong> , Saint Johnsbury, VT; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/2931060.jpg> <br><i>~38,993 MasterPoints</i>" data-original-title="Curtis Cheek">Curtis Cheek</strong> , Las Vegas, NV </td></tr>
+                        <tr><td> 21.57 </td><td> 3/4 </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/9710027.jpg> <br><i>~3,663 MasterPoints</i>" data-original-title="Lynda Nitabach">Lynda Nitabach</strong> , N Plainfield, NJ; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/7487150.jpg> <br><i>~48,529 MasterPoints</i>" data-original-title="Michael Seamon">Michael Seamon</strong> , Boca Raton, FL; Vincent Demuy , Palm Bch Gdns, FL; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5953537.jpg> <br><i>~15,727 MasterPoints</i>" data-original-title="Ishmael DelMonte">Ishmael DelMonte</strong> , Las Vegas, NV </td></tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="table-responsive">
+                <table class="photosBox table-responsive table-condensed">
+
+
+                    <thead>
+                        <tr>
+                            <th colspan="1" >
+                                Mon-Tues KO Bracket 2 - 2 of 2 (EVE)    &nbsp;&nbsp;&nbsp;<a href="http://bridgefinesse.com/ACBLLive/R1601010041B2KO.htm" target="_blank">FR Brackets</a>&nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/041B/2/results" target="_blank">Live Overalls</a>&nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/041B/2/recap" target="_blank">Live Recaps</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="photos table-responsive table-condensed">
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/7672411.jpg" alt="image" height="150"></td>
+                                </tr>
+                                <tr>
+                                    <td><b><b>Albert Shrive</b></b></td>
+                                    <td><b><b>Donald Dalpe</b></b></td>
+                                    <td><b><b>Marie Anzilotti</b></b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- <a name="overall2">  -->
+            <div class="table-responsive">
+                <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                    <thead>
+                        <tr>
+                            <th>MPs</th>
+                            <th>Rnk</th>
+                            <th>Monday-Tuesday KO Bracket II - 2 of 2 (EVE)<span class="tablesPlayed">(15 Tables)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--                    <tr><td> </td><td> </td><td> </td></tr>-->
+                        <tr><td> 21.26 </td><td> 1 </td><td> <b>Albert Shrive</b> , Naples, FL; <b>Donald Dalpe</b> , Fort Myers, FL; <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/7672411.jpg> <br><i>~3,198 MasterPoints</i>" data-original-title="Marie Anzilotti">Marie Anzilotti</strong> , Wilmington, DE; <b>Judith Argento</b>
+                                , Kingston, PA; <b>Thomas Andrews</b> , Utica, NY </td></tr>
+                        <tr><td> 14.88 </td><td> 2 </td><td> Ronald Dewey , Okeechobee, FL; James Carroll , Lyons, NY; - Robert Simard , East Syracuse, NY </td></tr>
+                        <tr><td> 8.50 </td><td> 3/4 </td><td> Jeffery Jones , Vero Beach, FL; Michael Zeller , York, PA; , Virginia Beach, VA;
+                                Stefan Basinski - Sylvie Basinski , Thorndale, PA </td></tr>
+                        <tr><td> 8.50 </td><td> 3/4 </td><td> Jim Mulbrandon - Lewis Himelhoch - , Orlando, FL; Hal Crosthwaite , Winter Park, FL </td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- <a name="overall3">  -->
+            <div class="table-responsive">
+                <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                    <thead>
+                        <tr>
+                            <th>MPs</th>
+                            <th>Rnk</th>
+                            <th>Monday-Tuesday KO Bracket III - 2 of 2 (EVE)<span class="tablesPlayed">(16 Tables)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--                    <tr><td> </td><td> </td><td> </td></tr>-->
+                        <tr><td> 11.68 </td><td> 1 </td><td> <b>David Terry</b> , Orlando, FL; <b>Mary Ellen Kammert</b> , Altamonte Spg, FL; <b>Susan Airth</b> -
+                                <b>William Airth Jr</b> , Orlando, FL;  </td></tr>
+                        <tr><td> 8.18 </td><td> 2 </td><td> Betsy Bunting - Brenda Kefauver - R J Joneja - Jo Goodman , Naples, FL;  </td></tr>
+                        <tr><td> 4.67 </td><td> 3/4 </td><td> Nancy McCrory - Jane Kuckel - Sharon Weisenauer - Linda Golle , Estero, FL;  </td></tr>
+                        <tr><td> 4.67 </td><td> 3/4 </td><td> Gil Krawitz , Potomac Falls, VA; Roger Price , Millerton, NY; Barbara Drabek Doyle , Estero, FL;
+                                Leslie Schoenfeld , Fort Myers, FL;
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="table-respoonsive">
+                <table class="photosBox table-responsive table-condensed">
+
+
+                    <thead>
+                        <tr>
+                            <th colspan="2" >
+                                Mon AFT BOGO Pairs &nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/0401/1/results" target="_blank">Live Overalls</a>&nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/0401/1/recap" target="_blank">Live Recaps</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>A</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="photos table-responsive table-condensed">
+                                <tr>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/9365648.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/2886782.jpg" alt="image" height="150"></td>
+                                </tr>
+                                <tr>
+                                    <td><b><b>Kevin Dwyer</b></b></td>
+                                    <td><b><b>Kimberly Whipple</b></b></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="photos table-responsive table-condensed">
+                                <tr>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/9632026.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/9632034.jpg" alt="image" height="150"></td>
+                                </tr>
+                                <tr>
+                                    <td><b><b>Kenneth Lindholm</b></b></td>
+                                    <td><b><b>Carol Lindholm</b></b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- <a name="overall4">  -->
+
+
+            <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                <thead>
+                    <tr>
+                        <th>MPs</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>Monday Afternoon BOGO Pairs<span class="tablesPlayed">(44.5 Tables)</span></th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--                    <tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>-->
+                    <tr><td> 10.43 </td><td> 1     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/9365648.jpg> <br><i>~12,531 MasterPoints</i>" data-original-title="Kevin Dwyer">Kevin Dwyer</strong>, Melbourne, FL - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/2886782.jpg> <br><i>~3,303 MasterPoints</i>" data-original-title="Kimberly Whipple">Kimberly Whipple</strong>, Boca Grande, FL </td><td> 65.47 </td></tr>
+                    <tr><td> 7.82 </td><td> 2     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4388984.jpg> <br><i>~22,306 MasterPoints</i>" data-original-title="Bert Newman">Bert Newman</strong> - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5172578.jpg> <br><i>~10,244 MasterPoints</i>" data-original-title="Kathy Newman">Kathy Newman</strong>, West Bloomfield, MI </td><td> 65.02 </td></tr>
+                    <tr><td> 5.87 </td><td> 3     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/3579530.jpg> <br><i>~13,739 MasterPoints</i>" data-original-title="Adrian Dovell">Adrian Dovell</strong> - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/1448277.jpg> <br><i>~13,177 MasterPoints</i>" data-original-title="Patricia Dovell">Patricia Dovell</strong>, Gainesville, FL </td><td> 64.71 </td></tr>
+                    <tr><td> 8.15 </td><td> 4     </td><td> 1     </td><td>  </td><td> <b>Robert Yon</b> - <b>E Michael McKee</b>, Anderson, SC </td><td> 63.92 </td></tr>
+                    <tr><td> 6.11 </td><td> 5     </td><td> 2     </td><td>  </td><td> Richard Fellars, Delray Beach, FL - Mark Friedlander, Deerfield, IL </td><td> 62.86 </td></tr>
+                    <tr><td> 4.58 </td><td> 6     </td><td> 3     </td><td>  </td><td> Dwight Hildebrand - Martha Hyde, Bellevue, NE </td><td> 62.35 </td></tr>
+                    <tr><td> 3.44 </td><td> 7     </td><td> 4     </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/3299570.jpg> <br><i>~1,229 MasterPoints</i>" data-original-title="Won Yang">Won Yang</strong>, Clermont, FL - Philip Dewitt Jr, Windermere, FL </td><td> 62.24 </td></tr>
+                    <tr><td> 2.58 </td><td> 8     </td><td> 5     </td><td>  </td><td> Jan Vandersluis - Helen Vandersluis, Palm Bch Gdns, FL </td><td> 60.85 </td></tr>
+                    <tr><td> 1.93 </td><td> 9     </td><td> 6     </td><td>  </td><td> William Koke - Shirley Koke, Jensen Beach, FL </td><td> 60.84 </td></tr>
+                    <tr><td> 1.06 </td><td> 10    </td><td>  </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5880327.jpg> <br><i>~5,768 MasterPoints</i>" data-original-title="Jay Whipple III">Jay Whipple III</strong>, Boca Grande, FL - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/6048854.jpg> <br><i>~18,587 MasterPoints</i>" data-original-title="Michael Kamil">Michael Kamil</strong>, Spartanburg, SC </td><td> 60.63 </td></tr>
+                    <tr><td> 1.57 </td><td>  </td><td> 7     </td><td>  </td><td> Andrew Wilkin, Casselberry, FL - William Vaughan, Orlando, FL </td><td> 59.15 </td></tr>
+                    <tr><td> 2.46 </td><td>  </td><td> 8     </td><td>  </td><td> Allison Hunt, Charlotte, NC - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4649508.jpg> <br><i>~2,583 MasterPoints</i>" data-original-title="Luz Ortega">Luz Ortega</strong>, Melbourne, FL </td><td> 59.15 </td></tr>
+                    <tr><td> 3.22 </td><td>  </td><td>  </td><td> 1     </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/9632026.jpg> <br><i>~611 MasterPoints</i>" data-original-title="Kenneth Lindholm">Kenneth Lindholm</strong> - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/9632034.jpg> <br><i>~607 MasterPoints</i>" data-original-title="Carol Lindholm">Carol Lindholm</strong>, Lakewood Ranch, FL </td><td> 57.12 </td></tr>
+                    <tr><td> 2.42 </td><td>  </td><td>  </td><td> 2     </td><td> Robert Frye, Tallahassee, FL - Gil Krawitz, Potomac Falls, VA </td><td> 56.27 </td></tr>
+                    <tr><td> 1.81 </td><td>  </td><td>  </td><td> 3     </td><td> Brian Buhr, Lakeland, FL - Frank Salvatore, Port Dover, ON </td><td> 54.32 </td></tr>
+                    <tr><td> 1.36 </td><td>  </td><td>  </td><td> 4     </td><td> Patricia Gallman - Sue Coleman, Lakeland, FL </td><td> 53.38 </td></tr>
+                    <tr><td> 1.30 </td><td>  </td><td>  </td><td> 5     </td><td> Jane Walker - Bruce Walker, Lakeland, FL </td><td> 52.52 </td></tr>
+                    <tr><td> 0.76 </td><td>  </td><td>  </td><td> 6     </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/9562044.jpg> <br><i>~685 MasterPoints</i>" data-original-title="Barbara Stirling">Barbara Stirling</strong>, Boca Grande, FL - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/6812023.jpg> <br><i>~490 MasterPoints</i>" data-original-title="Margaret Barrett">Margaret Barrett</strong>, Lyme, CT </td><td> 52.47 </td></tr>
+                </tbody>
+
+            </table>
+            <div class="table-responsive">
+                <table class="photosBox table-responsive table-condensed">
+
+
+                    <thead>
+                        <tr>
+                            <th colspan="2" >
+                                Monday Evening Charity Pairs<a href="http://live.acbl.org/event/R1601010/0402/1/results" target="_blank"><br>
+                                    Live Overalls</a>&nbsp;&nbsp;&nbsp;<a href="http://live.acbl.org/event/R1601010/0402/1/recap" target="_blank">Live Recaps</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="photos table-responsive table-condensed">
+                                <tr>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/1330586.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/3980871.jpg" alt="image" height="150"></td>
+                                </tr>
+                                <tr>
+                                    <td><b><b>John Russell</b></b></td>
+                                    <td><b><b>Norman Coombs</b></b></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="photos table-responsive table-condensed">
+                                <tr>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/4649508.jpg" alt="image" height="150"></td>
+                                    <td><img class="image-responsive" src="http://bridgefinesse.com/acblmerge/images/faces/3111164.jpg" alt="image" height="150"></td>
+                                </tr>
+                                <tr>
+                                    <td><b><b>Luz Ortega</b></b></td>
+                                    <td><b><b>Tansu Aksu</b></b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- <a name="overall5">  -->
+            <div class="table-responsive">
+                <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                    <thead>
+                        <tr>
+                            <th>MPs</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>Monday Evening Charity Pairs<span class="tablesPlayed">(25.5 Tables)</span></th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--                        <tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>-->
+                        <tr><td> 10.50 </td><td> 1     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/
+
+                                                                                               1330586.jpg> <br><i>~24,642 MasterPoints</i>" data-original-title="John Russell">John Russell</strong>,
+                                N Barrington, IL -
+                                <strong rel="popover" class="player"
+                                        data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/3980871.jpg> <br><i>~24,328
+                                        MasterPoints</i>" data-original-title="
+                                        Norman Coombs">Norman Coombs</strong>, Brookville, IN </td><td> 64.50 </td></tr>
+                        <tr><td> 7.88 </td><td> 2     </td><td> 1     </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4649508
+
+                                                                                                   .jpg> <br><i>~2,583 MasterPoints</i>" data-original-title="Luz Ortega">Luz Ortega</strong>, Melbourne, FL -
+                                <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/3111164.jpg> <br><i>~2,325 MasterPoints</i>"
+                                        data-original-title="Tansu Aksu">Tansu Aksu</strong>, Orlando, FL </td><td> 63.14 </td></tr>
+                        <tr><td> 5.91 </td><td> 3     </td><td> 2     </td><td>  </td><td> Doug Schlosser - William Karnaze Jr, Lees Summit, MO </td><td> 60.45 </td></tr>
+                        <tr><td> 5.25 </td><td> 4     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player"
+                                                                                              data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/8471908.jpg> <br><i>~8,510 MasterPoints</i>"
+                                                                                              data-original-title="Irina Kislitsyna">Irina Kislitsyna</strong>, Aventura, FL - Michel Rapoport, Sarasota, FL </td><td> 59.66 </td></tr>
+                        <tr><td> 3.68 </td><td> 5     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player"
+                                                                                              data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5325145.jpg> <br><i>~8,429 MasterPoints</i>"
+                                                                                              data-original-title="Sumner Steinfeldt">Sumner Steinfeldt</strong>, Washington, DC - Sarah Anne Cressy, Falls Church, VA </td><td> 59.02 </td></tr>
+                        <tr><td> 2.63 </td><td> 6     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player"
+                                                                                              data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/8997896.jpg> <br><i>~14,102 MasterPoints</i>"
+                                                                                              data-original-title="Fred King">Fred King</strong>, Mc Lean, VA - Rebecca Duty, Richmond, VA </td><td> 58.58 </td></tr>
+                        <tr><td> 1.87 </td><td> 7     </td><td>  </td><td>  </td><td> Sharon Fellars, Delray Beach, FL - Burton Schlosberg, Hamilton, NJ </td><td> 57.49 </td></tr>
+                        <tr><td> 1.84 </td><td> 8     </td><td>  </td><td>  </td><td> <strong rel="popover" class="player"
+                                                                                              data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5172578.jpg> <br><i>~10,244 MasterPoints</i>"
+                                                                                              data-original-title="Kathy Newman">Kathy Newman</strong> - <strong rel="popover" class="player"
+                                                                                              data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4388984.jpg> <br><i>~22,306 MasterPoints</i>"
+                                                                                              data-original-title="Bert Newman">Bert Newman</strong>, West Bloomfield, MI </td><td> 56.46 </td></tr>
+
+
+
+                        <tr><td> 3.08 </td><td> 9     </td><td> 3     </td><td>  </td><td> Allyson Wolfe, Saint Louis, MO - Shmuel Greenberg, Israel </td><td> 56.39 </td></tr>
+                        <tr><td> 1.40 </td><td> 10    </td><td>  </td><td>  </td><td> <strong rel="popover"
+                                                                                              class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/4383974.jpg> <br><i>~37,612 MasterPoints</i>"
+                                                                                              data-original-title="Chuck Said">Chuck Said</strong>, Nashville, TN - Halle Fowler, Crested Butte, CO </td><td> 55.64 </td></tr>
+
+
+
+
+                        <tr><td> 2.31 </td><td>  </td><td> 4     </td><td>  </td><td> Andrew Wilkin, Casselberry, FL - William Vaughan, Orlando, FL </td><td> 54.39 </td></tr>
+                        <tr><td> 2.14 </td><td>  </td><td> 5     </td><td> 1     </td><td> <b>Jo Anne Knodel</b>, Pearland, TX - <b>Jane Boozalis</b>, Houston, TX </td><td> 54.08 </td></tr>
+                        <tr><td> 1.42 </td><td>  </td><td> 6     </td><td>  </td><td> Mark Friedlander, Deerfield, IL - Richard Fellars, Delray Beach, FL </td><td> 53.45 </td></tr>
+                        <tr><td> 1.61 </td><td>  </td><td>  </td><td> 2     </td><td> Janet Stratton - Robert Stratton, Muncie, IN </td><td> 50.24 </td></tr>
+                        <tr><td> 1.20 </td><td>  </td><td>  </td><td> 3     </td><td> RonAldo Musto, Vero Beach, FL - Mary Newton, Charlottesville, VA </td><td> 49.87 </td></tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- <a name="overall6">  -->
+
+
+            <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                <thead>
+                    <tr>
+                        <th>MPs</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>Monday Afternoon 299er Pairs<span class="tablesPlayed">(12.5 Tables)</span></th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--                    <tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>-->
+                    <tr><td> 3.02 </td><td> 1     </td><td>  </td><td>  </td><td> <b>R J Joneja</b> - <b>Jo Goodman</b>, Naples, FL </td><td> 61.70 </td></tr>
+                    <tr><td> 2.27 </td><td> 2     </td><td> 1     </td><td> 1     </td><td> <b>Art Van De Coeverin</b>, Thamesford, ON - <b>Anne Van De Coeverin</b> </td><td> 59.83 </td></tr>
+                    <tr><td> 1.70 </td><td> 3     </td><td> 2     </td><td> 2     </td><td> Douglas Vene, Coram, NY - Maury Fjestad, The Villages, FL </td><td> 58.71 </td></tr>
+                    <tr><td> 1.27 </td><td> 4     </td><td> 3     </td><td>  </td><td> <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5869234.jpg> <br><i>~50 MasterPoints</i>" data-original-title="Patti Cragg">Patti Cragg</strong> - <strong rel="popover" class="player" data-content="<img src=http://bridgefinesse.com/acblmerge/images/faces/5869161.jpg> <br><i>~50 MasterPoints</i>" data-original-title="Charles Cragg">Charles Cragg</strong>, Tottenham, ON </td><td> 58.67 </td></tr>
+                    <tr><td> 0.96 </td><td> 5     </td><td>  </td><td>  </td><td> Donna Edwards - Michael Edwards, Suffolk, VA </td><td> 56.41 </td></tr>
+                    <tr><td> 1.06 </td><td> 6     </td><td>  </td><td>  </td><td> Anna Smith - Fran Hultquist, Auburn, AL </td><td> 55.08 </td></tr>
+                    <tr><td> 0.84 </td><td>  </td><td> 4     </td><td>  </td><td> Charles Roach - Lenore Roach, Burlington, ON </td><td> 53.76 </td></tr>
+                    <tr><td> 0.63 </td><td>  </td><td> 5     </td><td>  </td><td> Jerry Sherman - Susan Sherman, Ruskin, FL </td><td> 50.04 </td></tr>
+                </tbody>
+
+            </table>
+            <div class="table-responsivie">
+                <!-- <a name="overall7">  -->
+
+                <table class="large table-responsive table-striped table-condensed" >
+
+
+
+                    <thead>
+                        <tr>
+                            <th>MPs</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>Monday Afternoon 0-20 Free Pairs<span class="tablesPlayed">(5.5 Tables)</span></th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--                    <tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>-->
+                        <tr><td>1.49</td><td>1</td><td>1</td><td>1</td><td> <b>Mimi Bergstedt</b> - <b>Sally Dearborn</b> </td><td> 66.67 </td></tr>
+                        <tr><td>1.12</td><td>2</td><td></td><td></td><td> Dee Berglin, Clermont, FL - Judy OBrien </td><td> 62.50 </td></tr>
+                        <tr><td>0.84</td><td>3</td><td></td><td></td><td> Patsy Rust - Nancy Harris, Lakeland, FL </td><td> 61.67 </td></tr>
+                        <tr><td>0.63</td><td>4</td><td></td><td></td><td> Joyce Bates, Orlando, FL - Natalie Weinman, Longwood, FL </td><td> 60.83 </td></tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <br>
+            <a href="http://TheCommonGame.com"><img class="img-responsive center-block" src="http://bridgefinesse.com/fastresults/CGBannerforFR.png" alt="Ad" width="720"></a>
+
+            <div class="section">
+                <hr class="stylehr">
+                <h2>SECTION RESULTS</h2>
+                <hr class="stylehr">
+            </div>
+
+            <table class="small table-responsive table-condensed">
+                <thead>
+                    <tr>
+                        <th colspan="2"><ul></ul><u>Monday Afternoon BOGO Pairs (1 of 1 (AFT) Session 1) - <span style="font-size: 14px; font-style:italic">(44.5 Tables) </span>
+                            </u><u><i> Sections  K L M N </i></u></th>
+                    </tr>
+                </thead>
+                <!--    <tbody>-->
+                <tr>
+                    <td>
+                        <table id="SectionNS" class= "section table-responsive table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>NORTH-SOUTH </th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td> 1     </td><td>  </td><td> <b>Dwight Hildebrand</b> - <b>Martha Hyde</b> </td><td> 62.35 </td></tr>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>Kevin Dwyer</b> - <b>Kimberly Whipple</b> </td><td> 65.47 </td></tr>
+                                <tr><td> 2     </td><td> 1     </td><td>  </td><td> <b>Jan Vandersluis</b> - <b>Helen Vandersluis</b> </td><td> 60.85 </td></tr>
+                                <tr><td> 2     </td><td> 2     </td><td>  </td><td> Won Yang - Philip Dewitt Jr </td><td> 62.24 </td></tr>
+                                <tr><td> 3     </td><td> 2     </td><td>  </td><td> William Koke - Shirley Koke </td><td> 60.84 </td></tr>
+                                <tr><td> 3     </td><td> 3     </td><td>  </td><td> Andrew Wilkin - William Vaughan </td><td> 59.15 </td></tr>
+                                <tr><td> 4     </td><td> 3     </td><td>  </td><td> Sharon Stevens - Myrna Mackey </td><td> 56.33 </td></tr>
+                                <tr><td> 4     </td><td>  </td><td>  </td><td> Fred King - Rebecca Duty </td><td> 57.81 </td></tr>
+                                <tr><td> 5     </td><td>  </td><td>  </td><td> Maria Moore - Marti Cowie </td><td> 55.86 </td></tr>
+                                <tr><td> 5     </td><td>  </td><td>  </td><td> Chuck Malcolm - Marti Malcolm </td><td> 54.79 </td></tr>
+                                <tr><td> 6     </td><td> 4     </td><td> 1     </td><td> <b>Patricia Gallman</b> - <b>Sue Coleman</b> </td><td> 53.38 </td></tr>
+                                <tr><td> 6     </td><td>  </td><td>  </td><td> Chuck Said - Halle Fowler </td><td> 55.43 </td></tr>
+                                <tr><td> 7     </td><td> 4     </td><td>  </td><td> Jack Grier - Alina Grier </td><td> 54.75 </td></tr>
+                                <tr><td> 7     </td><td> 5     </td><td>  </td><td> Julia Zucker - Nat Zucker </td><td> 51.90 </td></tr>
+                                <tr><td> 8     </td><td> 5     </td><td>  </td><td> Jeffrey Furler - Eunice Patton </td><td> 54.07 </td></tr>
+                                <tr><td> 8     </td><td>  </td><td>  </td><td> Dennis Wick - Eli Schneider </td><td> 51.27 </td></tr>
+                                <tr><td> 9     </td><td> 6     </td><td>  </td><td> Gabrielle Sherman - Janice Dashler </td><td> 53.78 </td></tr>
+                                <tr><td> 9     </td><td>  </td><td>  </td><td> James Praught - Melinda Maclean </td><td> 50.23 </td></tr>
+                                <tr><td>  </td><td> 6     </td><td>  </td><td> Mark Fitzmorris - Joseph Ur </td><td> 50.01 </td></tr>
+                                <tr><td>  </td><td>  </td><td> 1     </td><td> <b>Jane Walker</b> - <b>Bruce Walker</b> </td><td> 52.52 </td></tr>
+                                <tr><td>  </td><td>  </td><td> 2     </td><td> Lorraine Harris - Faye Conti </td><td> 51.25 </td></tr>
+                                <tr><td>  </td><td>  </td><td> 3     </td><td> Mary Newton - Donna Stearns </td><td> 48.48 </td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!--                </tr>
+                                    <tr>-->
+                    <td>
+                        <table id="SectionEW" class = "section table-responsive table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>EAST-WEST</th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>Adrian Dovell</b> - <b>Patricia Dovell</b> </td><td> 64.71 </td></tr>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>Bert Newman</b> - <b>Kathy Newman</b> </td><td> 65.02 </td></tr>
+                                <tr><td> 2     </td><td> 1     </td><td>  </td><td> <b>Allison Hunt</b> - <b>Luz Ortega</b> </td><td> 59.15 </td></tr>
+                                <tr><td> 2     </td><td> 1     </td><td>  </td><td> <b>Robert Yon</b> - <b>E Michael McKee</b> </td><td> 63.92 </td></tr>
+                                <tr><td> 3     </td><td> 2     </td><td>  </td><td> Richard Fellars - Mark Friedlander </td><td> 62.86 </td></tr>
+                                <tr><td> 3     </td><td>  </td><td>  </td><td> Kurt Gandenberger - David Standig </td><td> 57.58 </td></tr>
+                                <tr><td> 4     </td><td> 2     </td><td> 1     </td><td> <b>Kenneth Lindholm</b> - <b>Carol Lindholm</b> </td><td> 57.12 </td></tr>
+                                <tr><td> 4     </td><td>  </td><td>  </td><td> Jay Whipple III - Michael Kamil </td><td> 60.63 </td></tr>
+                                <tr><td> 5     </td><td> 3     </td><td> 2     </td><td> Robert Frye - Gil Krawitz </td><td> 56.27 </td></tr>
+                                <tr><td> 5     </td><td>  </td><td>  </td><td> Cynthia Schneider - Sharon Fellars </td><td> 57.12 </td></tr>
+                                <tr><td> 6     </td><td> 4     </td><td>  </td><td> Norman Poythress - William Pollans </td><td> 56.01 </td></tr>
+                                <tr><td> 6     </td><td>  </td><td>  </td><td> Tansu Aksu - Charles Miner </td><td> 55.90 </td></tr>
+                                <tr><td> 7     </td><td> 3     </td><td>  </td><td> Phillip Cummins - Karen Cummins </td><td> 51.17 </td></tr>
+                                <tr><td> 7     </td><td> 5     </td><td>  </td><td> Dennis Feuer - Abbie Feuer </td><td> 54.84 </td></tr>
+                                <tr><td> 8     </td><td> 4     </td><td>  </td><td> Jim Mulbrandon - Dan Newcomb </td><td> 51.03 </td></tr>
+                                <tr><td> 8     </td><td> 6     </td><td>  </td><td> Brian Buhr - Frank Salvatore </td><td> 54.32 </td></tr>
+                                <tr><td> 9     </td><td> 5     </td><td>  </td><td> John Moschella - John Moschella </td><td> 50.60 </td></tr>
+                                <tr><td> 9     </td><td>  </td><td>  </td><td> Margaret Cooke - Jeanie Engebretson </td><td> 52.83 </td></tr>
+                                <tr><td>  </td><td> 6     </td><td>  </td><td> Jane Formet - Chris Kindt </td><td> 50.21 </td></tr>
+                                <tr><td>  </td><td> 7     </td><td>  </td><td> Babak Shafii - James Muller </td><td> 48.91 </td></tr>
+                                <tr><td>  </td><td>  </td><td> 1     </td><td> <b>Mary Ellen Kammert</b> - <b>David Terry</b> </td><td> 45.47 </td></tr>
+                                <tr><td>  </td><td>  </td><td> 2     </td><td> RonAldo Musto - Marilyn McIntosh </td><td> 44.31 </td></tr>
+                            </tbody>
+                        </table>
+
+                    </td>
+                </tr>
+            </table>
+
+
+            <table class="small table-responsive table-condensed">
+                <thead>
+                    <tr>
+                        <th colspan="2"><ul></ul><u>Monday Evening Charity Pairs (1 of 1 (EVE) Session 1) - <span style="font-size: 12px; font-style:italic">(25.5 Tables) </span></u><u><i> Sections  J K </i></u><ul></ul></th>
+                    </tr>
+                </thead>
+                <!--    <tbody>-->
+                <tr>
+                    <td>
+                        <table id="SectionNS" class= "section table-responsive table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th style="text-align: center">NORTH-SOUTH </th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>John Russell</b> - <b>Norman Coombs</b> </td><td> 64.50 </td></tr>
+                                <tr><td> 2     </td><td> 1     </td><td>  </td><td> <b>Luz Ortega</b> - <b>Tansu Aksu</b> </td><td> 63.14 </td></tr>
+                                <tr><td> 3     </td><td> 2     </td><td>  </td><td> Doug Schlosser - William Karnaze Jr </td><td> 60.45 </td></tr>
+                                <tr><td> 4     </td><td>  </td><td>  </td><td> Sharon Fellars - Burton Schlosberg </td><td> 57.49 </td></tr>
+                                <tr><td> 5     </td><td>  </td><td>  </td><td> Chuck Said - Halle Fowler </td><td> 55.64 </td></tr>
+                                <tr><td> 6     </td><td>  </td><td>  </td><td> Jimmy Pelham - Amal Dasgupta </td><td> 55.24 </td></tr>
+                                <tr><td> 7     </td><td> 3     </td><td>  </td><td> Mark Friedlander - Richard Fellars </td><td> 53.45 </td></tr>
+                                <tr><td> 8     </td><td>  </td><td>  </td><td> Cynthia Schneider - Eli Schneider </td><td> 53.05 </td></tr>
+                                <tr><td> 9     </td><td> 4     </td><td>  </td><td> Phillip Cummins - Karen Cummins </td><td> 52.83 </td></tr>
+                                <tr><td> 10    </td><td> 5     </td><td>  </td><td> Jim Ricker - Patti Ricker </td><td> 51.97 </td></tr>
+                                <tr><td>  </td><td> 6     </td><td>  </td><td> Kathy Rolfe - Dayle Harrison </td><td> 51.49 </td></tr>
+                                <tr><td>  </td><td>  </td><td> 1     </td><td> <b>Janet Stratton</b> - <b>Robert Stratton</b> </td><td> 50.24 </td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!--                </tr>
+                                    <tr>-->
+                    <td>
+
+
+
+                        <table id="SectionEW" class = "section table-responsive table-striped">
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th style="text-align: center">EAST-WEST</th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>Irina Kislitsyna</b> - <b>Michel Rapoport</b> </td><td> 59.66 </td></tr>
+                                <tr><td> 2     </td><td>  </td><td>  </td><td> Sumner Steinfeldt - Sarah Anne Cressy </td><td> 59.02 </td></tr>
+                                <tr><td> 3     </td><td>  </td><td>  </td><td> Fred King - Rebecca Duty </td><td> 58.58 </td></tr>
+                                <tr><td> 4     </td><td>  </td><td>  </td><td> Kathy Newman - Bert Newman </td><td> 56.46 </td></tr>
+                                <tr><td> 5     </td><td> 1     </td><td>  </td><td> <b>Allyson Wolfe</b> - <b>Shmuel Greenberg</b> </td><td> 56.39 </td></tr>
+                                <tr><td> 6     </td><td> 2     </td><td>  </td><td> Andrew Wilkin - William Vaughan </td><td> 54.39 </td></tr>
+                                <tr><td> 7     </td><td> 3     </td><td> 1     </td><td> <b>Jo Anne Knodel</b> - <b>Jane Boozalis</b> </td><td> 54.08 </td></tr>
+                                <tr><td> 8     </td><td>  </td><td>  </td><td> Maria Moore - Marti Cowie </td><td> 53.46 </td></tr>
+                                <tr><td> 9     </td><td>  </td><td>  </td><td> Mike Smith - Dennis Wick </td><td> 53.11 </td></tr>
+                                <tr><td> 10    </td><td> 4     </td><td>  </td><td> Diane Graese - Junko Hemus </td><td> 50.29 </td></tr>
+                                <tr><td>  </td><td> 5     </td><td> 2     </td><td> RonAldo Musto - Mary Newton </td><td> 49.87 </td></tr>
+                                <tr><td>  </td><td> 6     </td><td>  </td><td> Mark Fitzmorris - Joseph Ur </td><td> 49.13 </td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="small table-responsive table-condensed">
+                <thead>
+                    <tr>
+                        <th colspan="2"><ul></ul><u>Monday Afternoon 299er Pairs (1 of 1 (AFT) Session 1) - <span style="font-size: 12px; font-style:italic">(12.5 Tables) </span></u><u><i> Section  J </i></u><ul></ul></th>
+                    </tr>
+                </thead>
+                <!--    <tbody>-->
+                <tr>
+                    <td>
+
+                        <table id="SectionNS" class= "section table-responsive table-striped">
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th style="text-align: center">NORTH-SOUTH </th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>R J Joneja</b> - <b>Jo Goodman</b> </td><td> 61.70 </td></tr>
+                                <tr><td> 2     </td><td> 1     </td><td> 1     </td><td> <b>Douglas Vene</b> - <b>Maury Fjestad</b> </td><td> 58.71 </td></tr>
+                                <tr><td> 3     </td><td> 2     </td><td>  </td><td> Patti Cragg - Charles Cragg </td><td> 58.67 </td></tr>
+                                <tr><td> 4     </td><td>  </td><td>  </td><td> Donna Edwards - Michael Edwards </td><td> 56.41 </td></tr>
+                                <tr><td> 5     </td><td> 3     </td><td>  </td><td> Charles Roach - Lenore Roach </td><td> 53.76 </td></tr>
+
+                            </tbody>
+                        </table>
+                    </td>
+
+                    <td>
+                        <table id="SectionEW" class= "section table-responsive table-striped">
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>EAST-WEST</th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td> 1     </td><td> 1     </td><td> <b>Art Van De Coeverin</b> - <b>Anne Van De Coeverin</b> </td><td> 59.83 </td></tr>
+                                <tr><td> 2     </td><td>  </td><td>  </td><td> Anna Smith - Fran Hultquist </td><td> 55.08 </td></tr>
+                                <tr><td> 3     </td><td>  </td><td>  </td><td> Thomas Felton - Anton Dutton </td><td> 54.23 </td></tr>
+                                <tr><td> 4     </td><td>  </td><td>  </td><td> Bonnie Zeran - Sterling Zeran </td><td> 53.79 </td></tr>
+                                <tr><td> 5     </td><td>  </td><td>  </td><td> Barbara Drabek Doyle - Leslie Schoenfeld </td><td> 52.33 </td></tr>
+                                <tr><td>  </td><td> 2     </td><td>  </td><td> Stephen Curry - Tonja Curry </td><td> 48.83 </td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+
+            <table class="small table-responsive table-condensed">
+                <thead>
+                    <tr>
+                        <!--                        <th colspan="2"><ul></ul><u>Monday Afternoon 0-20 Free Pairs (1 of 1 (AFT) Session 1) - <span style="font-size: 12px; font-style:italic">(5.5 Tables) </span></u><u><i> Section  V </i></u><ul></ul></th>-->
+
+                        <th colspan="2">Monday Afternoon 0-20 Free Pairs (1 of 1 (AFT) Session 1) - <span style="font-size: 12px; font-style:italic">(5.5 Tables) </span><i> Section  V</i></th>
+                    </tr>
+                </thead>
+                <!--    <tbody>-->
+                <tr>
+                    <td>
+                        <!--<div>-->
+                        <table id="SectionNS" class = "section table-responsive table-striped">
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>NORTH-SOUTH </th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td>  </td><td>  </td><td> <b>Dee Berglin</b> - <b>Judy OBrien</b> </td><td> 62.50 </td></tr>
+                                <tr><td> 2     </td><td> 1     </td><td>  </td><td> <b>Patsy Rust</b> - <b>Nancy Harris</b> </td><td> 61.67 </td></tr>
+                            </tbody>
+                        </table>
+                        <!--</div>-->
+                    </td>
+                    <!--                </tr>
+                                    <tr>-->
+                    <td>
+                        <!--<div>-->
+
+
+
+                        <table id="SectionEW" class = "section table-responsive table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th style="text-align: center">EAST-WEST</th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 1     </td><td> 1     </td><td> 1     </td><td> <b>Mimi Bergstedt</b> - <b>Sally Dearborn</b> </td><td> 66.67 </td></tr>
+                                <tr><td> 2     </td><td> 2     </td><td> 2     </td><td> Dale Kernodle - Pamela Kernodle </td><td> 52.08 </td></tr>
+                            </tbody>
+                        </table>
+                        <!--</div>-->
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div id="cg1-ad" class="col-sm-12"></div>
+
+
+        <div id="quote">
+            <div class="row">
+                <div class="col-sm-12" >
+                    <table class="quote">
+
+                        <tr>
+                            <td class="quote"><br><h2>Quote of the Day</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="quoteTD"><blockquote>Let me tell you a story about Mary Morey. And now my story's begun.  I'll tell you another about her brother and now my story is done.</blockquote></td>
+                        </tr>
+
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <!--Masterpoints Tables-->
+        <div id="masterpoints">
+        <hr class="stylehr">
+        <h2>Top Master Point Winners To Date</h2>
+        <table class="small">
+            <tr>
+                <td>
+                    <table class="masterpoints table-striped table-condensed">
+                        <caption>
+
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>MPs</th>
+                                <th>Player</th>
+                            </tr>
+                        </thead>
+                        <tbody id="masterpoints1">
+                            <tr><td>1</td><td> 32.38 </td><td> <a href="http://live.acbl.org/player-results/6716334">Paul Facinelli</a> - Avon, OH </td></tr>
+                            <tr><td>2</td><td> 32.38 </td><td> <a href="http://live.acbl.org/player-results/3935159">Dan Roseberry</a> - Dover, OH </td></tr>
+                            <tr><td>3</td><td> 32.38 </td><td> <a href="http://live.acbl.org/player-results/2558211">Don Sulgrove</a> - Twinsburg, OH </td></tr>
+                            <tr><td>4</td><td> 32.38 </td><td> <a href="http://live.acbl.org/player-results/5007291">Kathleen Sulgrove</a> - Twinsburg, OH </td></tr>
+                            <tr><td>5</td><td> 25.63 </td><td> <a href="http://live.acbl.org/player-results/4388984">Bert Newman</a> - West Bloomfield, MI </td></tr>
+                            <tr><td>6</td><td> 25.63 </td><td> <a href="http://live.acbl.org/player-results/6753744">Anastasia Tessler</a> - Ann Arbor, MI </td></tr>
+                            <tr><td>7</td><td> 25.13 </td><td> <a href="http://live.acbl.org/player-results/1597396">Jim Bachelder</a> - Columbus, OH </td></tr>
+                            <tr><td>8</td><td> 25.13 </td><td> <a href="http://live.acbl.org/player-results/5191688">Kenneth Eichenbaum</a> - Pickerington, OH </td></tr>
+                            <tr><td>9</td><td> 25.13 </td><td> <a href="http://live.acbl.org/player-results/2029618">Douglas Simson</a> - Columbus, OH </td></tr>
+                            <tr><td>10</td><td> 25.13 </td><td> <a href="http://live.acbl.org/player-results/3914186">George St Pierre</a> - Columbus, OH </td></tr>
+                            <tr><td>11</td><td> 23.71 </td><td> <a href="http://live.acbl.org/player-results/7423268">Sudheer Pimputkar</a> - Galena, OH </td></tr>
+                            <tr><td>12</td><td> 23.71 </td><td> <a href="http://live.acbl.org/player-results/1134515">Vickie Sebastian</a> - Beavercreek, OH </td></tr>
+                            <tr><td>13</td><td> 22.72 </td><td> <a href="http://live.acbl.org/player-results/4849965">Robert Alexander</a> - Mentor, OH </td></tr>
+                            <tr><td>14</td><td> 22.72 </td><td> <a href="http://live.acbl.org/player-results/5966957">Stephanie Alexander</a> - Mentor, OH </td></tr>
+                            <tr><td>15</td><td> 22.61 </td><td> <a href="http://live.acbl.org/player-results/3236471">John Bacon</a> - Shaker Heights, OH </td></tr>
+                            <tr><td>16</td><td> 22.61 </td><td> <a href="http://live.acbl.org/player-results/3053261">Michael Creager</a> - Bedford, OH </td></tr>
+                            <tr><td>17</td><td> 21.44 </td><td> <a href="http://live.acbl.org/player-results/9821791">Mary Jane Gladfelter</a> - Columbus, OH </td></tr>
+                            <tr><td>18</td><td> 21.44 </td><td> <a href="http://live.acbl.org/player-results/9822100">Michael Gladfelter</a> - Columbus, OH </td></tr>
+                            <tr><td>19</td><td> 18.04 </td><td> <a href="http://live.acbl.org/player-results/6191894">Bernie Greenspan</a> - Beachwood, OH </td></tr>
+                            <tr><td>20</td><td> 17.38 </td><td> <a href="http://live.acbl.org/player-results/6036937">Jan Assini</a> - Aurora, OH </td></tr>
+                            <tr><td>21</td><td> 17.38 </td><td> <a href="http://live.acbl.org/player-results/1990918">Susan Stark</a> - Cleveland, OH </td></tr>
+                            <tr><td>22</td><td> 15.68 </td><td> <a href="http://live.acbl.org/player-results/1970100">Nicholas Hartung</a> - Astoria, NY </td></tr>
+                            <tr><td>23</td><td> 15.68 </td><td> <a href="http://live.acbl.org/player-results/7666039">Larry Jones</a> - Pickerington, OH </td></tr>
+                            <tr><td>24</td><td> 15.68 </td><td> <a href="http://live.acbl.org/player-results/2967472">Peter Merker</a> - Mentor, OH </td></tr>
+                            <tr><td>25</td><td> 15.68 </td><td> <a href="http://live.acbl.org/player-results/3921395">Douglas Millsap</a> - Columbus, OH </td></tr>
+                            <tr><td>26</td><td> 14.75 </td><td> <a href="http://live.acbl.org/player-results/7596243">Andrew Cockburn</a> - Morgantown, WV </td></tr>
+                            <tr><td>27</td><td> 14.75 </td><td> <a href="http://live.acbl.org/player-results/5243904">William Johnson</a> - Morgantown, WV </td></tr>
+                            <tr><td>28</td><td> 14.75 </td><td> <a href="http://live.acbl.org/player-results/6561322">Vicki Kane</a> - Morgantown, WV </td></tr>
+                            <tr><td>29</td><td> 14.75 </td><td> <a href="http://live.acbl.org/player-results/6300073">Lynne Ostrow</a> - Morgantown, WV </td></tr>
+                            <tr><td>30</td><td> 14.10 </td><td> <a href="http://live.acbl.org/player-results/3931684">Brian Ellis</a> - Beachwood, OH </td></tr>
+                            <tr><td>31</td><td> 13.64 </td><td> <a href="http://live.acbl.org/player-results/3240304">John Bernhard</a> - Sewickley, PA </td></tr>
+                            <tr><td>32</td><td> 13.64 </td><td> <a href="http://live.acbl.org/player-results/2317486">Carol Bolen</a> - Sewickley, PA </td></tr>
+                            <tr><td>33</td><td> 13.64 </td><td> <a href="http://live.acbl.org/player-results/9037632">Fleur Howard</a> - Gates Mills, OH </td></tr>
+                            <tr><td>34</td><td> 13.64 </td><td> <a href="http://live.acbl.org/player-results/7923236">Charles Scholl</a> - Beachwood, OH </td></tr>
+                            <tr><td>35</td><td> 13.30 </td><td> <a href="http://live.acbl.org/player-results/6036953">Richard Burgess</a> - Chesterland, OH </td></tr>
+                            <tr><td>36</td><td> 12.95 </td><td> <a href="http://live.acbl.org/player-results/4299434">Phillip Becker</a> - Beachwood, OH </td></tr>
+                            <tr><td>37</td><td> 12.95 </td><td> <a href="http://live.acbl.org/player-results/1631195">Kumar Bhatia</a> - Pepper Pike, OH </td></tr>
+                            <tr><td>38</td><td> 12.06 </td><td> <a href="http://live.acbl.org/player-results/2681633">Brad Swimmer</a> - Beachwood, OH </td></tr>
+                            <tr><td>39</td><td> 10.96 </td><td> <a href="http://live.acbl.org/player-results/7407211">Ann Kostell</a> - Westlake, OH </td></tr>
+                            <tr><td>40</td><td> 10.96 </td><td> <a href="http://live.acbl.org/player-results/8369992">Frank Paynter</a> - Grove City, OH </td></tr>
+                            <tr><td>41</td><td> 10.96 </td><td> <a href="http://live.acbl.org/player-results/2405571">Jo Anne Paynter</a> - Grove City, OH </td></tr>
+                            <tr><td>42</td><td> 10.96 </td><td> <a href="http://live.acbl.org/player-results/7400802">William Toler</a> - Bay Village, OH </td></tr>
+                            <tr><td>43</td><td> 9.85 </td><td> <a href="http://live.acbl.org/player-results/4496108">Delinda Boylan</a> - Monroe, MI </td></tr>
+                            <tr><td>44</td><td> 9.85 </td><td> <a href="http://live.acbl.org/player-results/9751467">Dianne Sradeja</a> - Toledo, OH </td></tr>
+                            <tr><td>45</td><td> 9.73 </td><td> <a href="http://live.acbl.org/player-results/1237535">Gladys Martin</a> - Hudson, OH </td></tr>
+                            <tr><td>46</td><td> 9.27 </td><td> <a href="http://live.acbl.org/player-results/4780515">Bernard Fudor</a> - Murrysville, PA </td></tr>
+                            <tr><td>47</td><td> 9.27 </td><td> <a href="http://live.acbl.org/player-results/5184983">Warren Oberfield</a> - Pittsburgh, PA </td></tr>
+                            <tr><td>48</td><td> 9.05 </td><td> <a href="http://live.acbl.org/player-results/4233492">Morton Klein</a> - Beachwood, OH </td></tr>
+                            <tr><td>49</td><td> 9.05 </td><td> <a href="http://live.acbl.org/player-results/2273179">Thomas Rice</a> - Cleveland, OH </td></tr>
+                            <tr><td>50</td><td> 8.79 </td><td> <a href="http://live.acbl.org/player-results/7361742">Alper Buldum</a> - Solon, OH </td></tr>
+                        </tbody>
+                    </table><td>
+
+                    <table class="masterpoints table-striped table-condensed">
+                        <caption>
+
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>MPs</th>
+                                <th>Player</th>
+                            </tr>
+                        </thead>
+                        <tbody id="masterpoints2">
+                            <tr><td>51</td><td> 8.79 </td><td> <a href="http://live.acbl.org/player-results/2774445">S Graham Kelly</a> - Hudson, OH </td></tr>
+                            <tr><td>52</td><td> 8.57 </td><td> <a href="http://live.acbl.org/player-results/2619520">Bonnie Goodman</a> - Pepper Pike, OH </td></tr>
+                            <tr><td>53</td><td> 8.57 </td><td> <a href="http://live.acbl.org/player-results/6546633">Peter Miller</a> - Shaker Heights, OH </td></tr>
+                            <tr><td>54</td><td> 8.38 </td><td> <a href="http://live.acbl.org/player-results/1884433">Sue Lan Ma</a> - Kirtland Hills, OH </td></tr>
+                            <tr><td>55</td><td> 8.38 </td><td> <a href="http://live.acbl.org/player-results/6510981">Nancy Ogreenc</a> - Wautoma, WI </td></tr>
+                            <tr><td>56</td><td> 8.27 </td><td> <a href="http://live.acbl.org/player-results/2647052">Steve Garfunkel</a> - Moreland Hills, OH </td></tr>
+                            <tr><td>57</td><td> 8.27 </td><td> <a href="http://live.acbl.org/player-results/1001736">E Rabin</a> - Gates Mills, OH </td></tr>
+                            <tr><td>58</td><td> 8.10 </td><td> <a href="http://live.acbl.org/player-results/9767789">Stanca Ciupe</a> - Blacksburg, VA </td></tr>
+                            <tr><td>59</td><td> 8.10 </td><td> <a href="http://live.acbl.org/player-results/9767770">Jonathan Forde</a> - Geneva, NY </td></tr>
+                            <tr><td>60</td><td> 7.62 </td><td> <a href="http://live.acbl.org/player-results/3580024">William Issa</a> - Shaker Heights, OH </td></tr>
+                            <tr><td>61</td><td> 7.62 </td><td> <a href="http://live.acbl.org/player-results/2489287">David Schmidt</a> - Shaker Heights, OH </td></tr>
+                            <tr><td>62</td><td> 7.32 </td><td> <a href="http://live.acbl.org/player-results/3612457">Douglas Cleland</a> - Collegeville, PA </td></tr>
+                            <tr><td>63</td><td> 7.32 </td><td> <a href="http://live.acbl.org/player-results/6827373">W Gentry</a> - Kent, OH </td></tr>
+                            <tr><td>64</td><td> 7.20 </td><td> <a href="http://live.acbl.org/player-results/7758022">Hope Ellis</a> - Beachwood, OH </td></tr>
+                            <tr><td>65</td><td> 7.20 </td><td> <a href="http://live.acbl.org/player-results/1022539">Kathy Pollock</a> - East Amherst, NY </td></tr>
+                            <tr><td>66</td><td> 7.06 </td><td> <a href="http://live.acbl.org/player-results/4227360">Virginia Young</a> - Hudson, OH </td></tr>
+                            <tr><td>67</td><td> 6.79 </td><td> <a href="http://live.acbl.org/player-results/6916058">Janet Auwerter</a> - Gates Mills, OH </td></tr>
+                            <tr><td>68</td><td> 6.79 </td><td> <a href="http://live.acbl.org/player-results/2971151">Barbara Cunliffe</a> - Bentleyville, OH </td></tr>
+                            <tr><td>69</td><td> 6.79 </td><td> <a href="http://live.acbl.org/player-results/4463757">Beverly McMullen</a> - Vermilion, OH </td></tr>
+                            <tr><td>70</td><td> 6.79 </td><td> <a href="http://live.acbl.org/player-results/3868982">Laura Ross</a> - Solon, OH </td></tr>
+                            <tr><td>71</td><td> 6.13 </td><td> <a href="http://live.acbl.org/player-results/2102811">Donald Rop</a> - Chagrin Falls, OH </td></tr>
+                            <tr><td>72</td><td> 6.10 </td><td> <a href="http://live.acbl.org/player-results/6560342">Barbara Bergman</a> - Wexford, PA </td></tr>
+                            <tr><td>73</td><td> 6.10 </td><td> <a href="http://live.acbl.org/player-results/3895696">Kenneth Bergman</a> - Wexford, PA </td></tr>
+                            <tr><td>74</td><td> 6.10 </td><td> <a href="http://live.acbl.org/player-results/5474671">Constance Hoechstetter</a> - Moon Township, PA </td></tr>
+                            <tr><td>75</td><td> 6.10 </td><td> <a href="http://live.acbl.org/player-results/3483444">Robert Quinlan</a> - Pittsburgh, PA </td></tr>
+                            <tr><td>76</td><td> 5.96 </td><td> <a href="http://live.acbl.org/player-results/3131505">Saleh Fetouh</a> - Buffalo, NY </td></tr>
+                            <tr><td>77</td><td> 5.96 </td><td> <a href="http://live.acbl.org/player-results/2545799">Paul Janicki</a> - Markham, ON </td></tr>
+                            <tr><td>78</td><td> 5.90 </td><td> <a href="http://live.acbl.org/player-results/1425722">Marilyn Bonn</a> - Solon, OH </td></tr>
+                            <tr><td>79</td><td> 5.90 </td><td> <a href="http://live.acbl.org/player-results/8214441">Eileen Gold</a> - Cleveland, OH </td></tr>
+                            <tr><td>80</td><td> 5.90 </td><td> <a href="http://live.acbl.org/player-results/6553230">Arthur Heuer</a> - Cleveland, OH </td></tr>
+                            <tr><td>81</td><td> 5.90 </td><td> <a href="http://live.acbl.org/player-results/1072811">Ellen Miles</a> - Beachwood, OH </td></tr>
+                            <tr><td>82</td><td> 5.90 </td><td> <a href="http://live.acbl.org/player-results/3693635">Joan Rogoff</a> - Beachwood, OH </td></tr>
+                            <tr><td>83</td><td> 5.90 </td><td> <a href="http://live.acbl.org/player-results/1241664">Kurt Rusch</a> - Mayfield Hgts, OH </td></tr>
+                            <tr><td>84</td><td> 5.79 </td><td> <a href="http://live.acbl.org/player-results/1885626">Indira Agarwal</a> - Akron, OH </td></tr>
+                            <tr><td>85</td><td> 5.79 </td><td> <a href="http://live.acbl.org/player-results/1885618">Subhash Agarwal</a> - Akron, OH </td></tr>
+                            <tr><td>86</td><td> 5.59 </td><td> <a href="http://live.acbl.org/player-results/7439148">Edia Shai</a> - University Hts, OH </td></tr>
+                            <tr><td>87</td><td> 5.48 </td><td> <a href="http://live.acbl.org/player-results/4315537">Sharon Bilek</a> - Independence, OH </td></tr>
+                            <tr><td>88</td><td> 5.27 </td><td> <a href="http://live.acbl.org/player-results/1187198">Janis Davis</a> - Pittsburgh, PA </td></tr>
+                            <tr><td>89</td><td> 5.27 </td><td> <a href="http://live.acbl.org/player-results/1286293">Robert Davis</a> - Pittsburgh, PA </td></tr>
+                            <tr><td>90</td><td> 5.26 </td><td> <a href="http://live.acbl.org/player-results/4214986">Wayne Heritage</a> - North Olmsted, OH </td></tr>
+                            <tr><td>91</td><td> 5.21 </td><td> <a href="http://live.acbl.org/player-results/8742243">Doris Mikstay</a> - Canton, OH </td></tr>
+                            <tr><td>92</td><td> 5.21 </td><td> <a href="http://live.acbl.org/player-results/8737908">Jill Smith</a> - Barberton, OH </td></tr>
+                            <tr><td>93</td><td> 4.96 </td><td> <a href="http://live.acbl.org/player-results/6139272">Michael Kraut</a> - Royal Oak, MI </td></tr>
+                            <tr><td>94</td><td> 4.96 </td><td> <a href="http://live.acbl.org/player-results/8407983">Jim Overcasher</a> - East Canton, OH </td></tr>
+                            <tr><td>95</td><td> 4.96 </td><td> <a href="http://live.acbl.org/player-results/2215128">Thomas Thomson</a> - Warren, MI </td></tr>
+                            <tr><td>96</td><td> 4.96 </td><td> <a href="http://live.acbl.org/player-results/4550307">John Tscholl</a> - Canton, OH </td></tr>
+                            <tr><td>97</td><td> 4.90 </td><td> <a href="http://live.acbl.org/player-results/5409551">Bill Quigney</a> - Mentor, OH </td></tr>
+                            <tr><td>98</td><td> 4.90 </td><td> <a href="http://live.acbl.org/player-results/6252737">Robin Quigney</a> - Mentor, OH </td></tr>
+                            <tr><td>99</td><td> 4.80 </td><td> <a href="http://live.acbl.org/player-results/4511298">Marie Kilian</a> - Pittsburgh, PA </td></tr>
+                            <tr><td>100</td><td> 4.80 </td><td> <a href="http://live.acbl.org/player-results/4331125">Margaret Symington</a> - Rochester, NY </td></tr>
+                        </tbody>
+                    </table>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="cg2-ad" class="col-sm-12">
+        <img class="img-responsive center-block" src="http://www.bridgefinesse.com/Fastresults/Ad2FastResults.png" alt="Ad" width= "720" />
+        <br>
+    </div>
+
+    <div id="volunteers">
+
+        <hr class="stylehr">
+        <h2 id="teamName" >Orlando Winter Volunteer Team</h2><hr>
+        <hr class="stylehr">
+
+        <script src="https://www.google.com/jsapi"></script>
+
+        <script>
+        google.load("visualization", "1", {packages: ["orgchart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{v: 'JMoschella', f: 'John Moschella<div style="color:blue; font-style:italic"><img src="http://TheCommonGame.com/acblmerge/images/faces/7654901.jpg" alt="Photo Missing" height="150" ><br>Tournament Co-Chair <br> Winter Springs, FL </div>'}, '', 'Tournament Co-Chair '],
+                [{v: 'CGriffey', f: 'Candace Griffey<div style="color:blue; font-style:italic"><img src="http://TheCommonGame.com/acblmerge/images/faces/6920411.jpg" alt="Photo Missing" height="150" ><br>Co-Chair <br> Vero Beach, FL </div>'}, 'JMoschella', 'Candace Griffey'],
+                [{v: 'DDavis', f: 'Dot Davis<div style="color:blue; font-style:italic"><img src="http://TheCommonGame.com/acblmerge/images/faces/3188094.jpg" alt="Photo Missing" height="150" ><br>Partnership Desk <br> Winter Park, FL </div>'}, 'JMoschella', 'Dot Davis'],
+                [{v: 'MLoeb', f: 'Maureen Loeb<div style="color:blue; font-style:italic"><img src="http://TheCommonGame.com/acblmerge/images/faces/5758564.jpg" alt="Photo Missing" height="150" ><br>Welcome Desk <br> Lake Mary, FL </div>'}, 'JMoschella', 'Maureen Loeb'],
+                [{v: 'MGlassmeyer', f: 'Martha Glassmeyer<div style="color:blue; font-style:italic"><img src="http://TheCommonGame.com/acblmerge/images/faces/2002477.jpg" alt="Photo Missing" height="150" ><br>Hospitality <br> Vero Beach, FL </div>'}, 'JMoschella', 'Martha Glassmeyer'],
+                [{v: 'KAdelman', f: 'Karen Adelman<div style="color:blue; font-style:italic"><img src="http://TheCommonGame.com/acblmerge/images/faces/8111103.jpg" alt="Photo Missing" height="150" ><br>I/N <br> Vero Beach, FL </div>'}, 'JMoschella', 'Karen Adelman'],
+            ]);
+
+
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+            chart.draw(data, {allowHtml: true});
+        }
+        </script>
+
+        <div id="chart_div"></div>
+
+    </div>
+    <div>
+        Design Consulting: Bill Hogsett, Cleveland (D5)
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
