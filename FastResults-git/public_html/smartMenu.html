@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Fast Results Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- SmartMenus core CSS (required) -->
+        <link href="http://whistclub.org/FastResults/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+
+        <!-- "sm-blue" menu theme (optional, you can use your own CSS, too) -->
+        <link href="http://whistclub.org/FastResults/css/sm-blue/sm-blue.css" rel="stylesheet" type="text/css" />
+
+        <!-- #main-menu config - instance specific stuff not covered in the theme -->
+        <!-- Put this in an external stylesheet if you want the media query to work in IE8 (e.g. where the rest of your page styles are) -->
+        <style type="text/css">
+            @media (min-width: 768px) {
+                #main-menu > li {
+                    float: none;
+                    display: table-cell;
+                    width: 1%;
+                    text-align: center;
+                }
+            }
+        </style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery -->
+        <!--<script type="text/javascript" src="../libs/jquery/jquery.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+        <!-- SmartMenus jQuery plugin -->
+        <script type="text/javascript" src="http://whistclub.org/FastResults/jquery.smartmenus.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- SmartMenus jQuery Bootstrap Addon CSS -->
+        <link href="http://whistclub.org/FastResults/addons/bootstrap/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+
+        <!-- SmartMenus jQuery init -->
+        <script>
+            $(function () {
+                $('#main-menu').smartmenus({
+                    subMenusSubOffsetX: 1,
+                    subMenusSubOffsetY: -8
+                });
+            });
+        </script>
+
+        <!--        <link rel="stylesheet" href="http://bridgefinesse.com//FastResults/style.css" type="text/css" />
+                <script src="http://bridgefinesse.com//FastResults/script.js"></script>-->
+
+        <style>
+
+            .quoteContainer {
+                height: 330px;
+                line-height: 400px;
+            }
+
+            .centered blockquote {
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            blockquote.style3 {
+                font: 18px/30px normal Tahoma, sans-serif;
+                /*                padding-top: 22px;
+                                margin: 5px;*/
+                /*                background-image: url(openquote3.gif);*/
+                background-position: top left;
+                background-repeat: no-repeat;
+                /*                text-indent: 65px;*/
+                font-size: 20px;
+            }
+            /*            blockquote.style3 span {
+                            display: block;
+                            background-image: url(closequote3.gif);
+                            background-repeat: no-repeat;
+                            background-position: bottom right;
+                        }*/
+
+            .firstcharacter {
+                float: left;
+                color: #903;
+                font-size: 75px;
+                line-height: 60px;
+                padding-top: 4px;
+                padding-right: 8px;
+                padding-left: 3px;
+                font-family: Georgia; }
+
+            .districts{
+                text-align: center;
+                font-size: 14px;
+            }
+
+            body{
+                background-color: #fbf3e8;
+            }
+
+            h1, h2{
+                word-wrap: break-word;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                -o-hyphens: auto;
+                hyphens: auto;
+                font-weight: bold;
+            }
+
+            @media screen and (max-width: 768px) {
+                h1, h2, h3{
+                    font-size:16px;
+                }
+
+
+            }
+
+            h3.headerH3{
+                color: white;
+                font-style: italic;
+                text-align: center;
+
+            }
+
+
+            a.FR_Link:link {color:#ff0000;}
+            /*            a.FR_Link:visited {color:#0000ff;}*/
+            a.FR_Link:hover {color:#ffcc00;}
+
+            /*ul ul ul ul li { background: ; }*/
+
+
+            table {
+                border-spacing: 0 ;
+                padding: 0;
+                background-color:Linen;}
+
+
+            /*           Not Used
+
+                        hd {
+                            border-spacing: 0 ;
+                            padding: 0;
+                            border-bottom-color:#ffffff;
+                            border-left-color:#ffffff;
+                            border-top-color:#ffffff;
+                            border-right-color:#ffffff;
+                            font-family:Verdana;
+                            font-size:10pt;
+                            font-style:normal;
+                            font-weight:normal;
+                            text-decoration:none;
+                        }*/
+
+            table p{
+                margin:0pt;
+            }
+            table th{
+                text-decoration:underline
+            }
+            /*            #titlebar {
+                            border: 1px solid black;
+                            font-family: Monaco,Helvetica,Arial;
+                            height:120px;
+                            background: DeepSkyBlue url(http://www.bridgefinesse.com/FRLogo.png) no-repeat left ;
+                        }   */
+
+
+            #titlebar {
+                border: 1px solid black;
+                font-family: Monaco,Helvetica,Arial;
+                font-size: 20px;
+                height:140px;
+                background: DeepSkyBlue;
+                background-image: url(http://www.bridgefinesse.com/FRLogo.png);
+                background-repeat: no-repeat;
+                background-position: left top;
+                text-align: center;
+                vertical-align: center;
+            }
+
+            centerText{
+                text-align: center;
+            }
+
+            #footer {
+                border: 1px solid black;
+                font-family: Monaco,Helvetica,Arial;
+                height:170px;
+                background: DeepSkyBlue ;}
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+
+<!--            <ul id="main-menu" class="sm sm-blue">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a>
+    <ul>
+      <li><a href="#">Item 2-1</a></li>
+      <li><a href="#">Item 2-2</a></li>
+      <li><a href="#">Item 2-3</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 3</a></li>
+</ul>-->
+
+
+
+
+            <div table-responsive>
+
+                <div id="titlebar" table-responsive>
+
+                    Welcome to Fast Results Home Page
+
+
+
+                    <h3 class="headerH3">Dedicated to delivering Pair/Team Results electronically!</h3>
+
+                    <!--                                <center> 	  &nbsp;ACBL# Login:
+                                                        <input onchange="location.href = 'http://bridgefinesse.com/PHPPOSTCGS.php?options=LookupFRACBL&amp;acblno=' + document.getElementById('acblno').value"
+                                                               type="password"
+                                                               id="acblno" size="7"
+                                                               maxlength="7" value=""/>&nbsp;
+                                                        <input
+                                                               type="submit"
+                                                               value="Submit"  style="width:60px;"
+                                                               />
+                                                    </center>-->
+
+                    <center>
+                        <!--                                    <form class="form-inline" role="form" action='http://bridgefinesse.com/PHPPOSTCGS.php?options=LookupFRACBL&amp;acblno=' +
+                                                                  document.getElementById('acblno').value' method="post">-->
+
+                        <form class="form-inline" role="form" >
+
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="acblno" value="" placeholder="ACBL Number">
+                            </div>
+
+
+                            <button type="submit" onclick="getValue()" class="btn btn-primary">Login</button>
+                        </form>
+                    </center>
+
+
+
+
+                    <hr>
+                    <div style="position:absolute; top:0; right:0; padding-right:10px">
+
+                        <a href="http://TheCommonGame.com"><img class="image-responsive" src="http://thecommongame.com/CGLogoSmallWhite.png" alt="TheCommonGame.com" ></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <nav id="main-nav" role="navigation">
+                <ul id="main-menu" class="sm sm-blue">
+
+
+                    <li><a href="#">Unit 219<br>Miracle Strip Sectional</a>
+                        <ul>
+                            <li><a href="#">Sun Jan 24, 2016</a>
+                                <ul>
+                                    <li><a href="http://bridgefinesse.com/FastResults/Library/D091601062160124000175.HTM">Swiss</a>
+                                        <ul>
+                                            <li>
+                                                <a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012424SWISSE1MS.HTM">Sunday Victory Points</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160124000175.1.HTM">Detail</a></li>
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Sat Jan 24, 2016</a>
+                                <ul>
+                                    <li> <a href="http://bridgefinesse.com/FastResults/Library/D091601062160123000174.HTM"><u>MORN</u></a>
+                                        <ul>
+                                            <li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012323MORNE1M.HTM">Sat Open Pairs #E/F</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000174.2.HTM">E E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000174.1.HTM">E N-S</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000174.4.HTM">F E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000174.3.HTM">F N-S</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012323MORNE2M.HTM">Saturday 299er Pairs (A)</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000174.6.HTM">A E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000174.5.HTM">A N-S</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#"><u>Aft</u></a>
+                                        <ul>
+                                            <li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012323AFTE1A.HTM">Sat Aft 299er Pairs (A</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000173.6.HTM" > A E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000173.5.HTM" > A N-S</a>
+                                                    </li>
+                                                </ul>
+
+                                            <li>
+                                            <li><a  class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012323AFTE2A.HTM">Sat Aft Open Pairs #E/F</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000173.2.HTM" > E E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000173.1.HTM" > E N-S</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000173.4.HTM" > F E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160123000173.3.HTM" > F N-S</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#" >Fri Jan 22, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601062160122000171.HTM" ><u>AFT</u></a>
+                                        <ul>
+                                            <li><a  class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012222AFTE1A.HTM">Fri Aft 299er Pairs (D)</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000171.6.HTM" > D E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000171.5.HTM" > D N-S</a></li></ul>
+                                            </li>
+                                            <li><a  class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012222AFTE2A.HTM">Fri Aft Open Pairs #E/F</a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000171.2.HTM" > E E-W</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000171.1.HTM" > E N-S</a></li>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000171.4.HTM" > F E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000171.3.HTM" > F N-S</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601062160122000172.HTM" ><u>EVE</u></a>
+                                        <ul><li><a  class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012222EVEE1E.HTM">Fri Eve 299er Pairs (D)</a>
+
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000172.5.HTM" > D</a></li></ul>
+                                            </li><li><a  class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012222EVEE2E.HTM">Fri Eve E Pairs (E)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000172.2.HTM" > E E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000172.1.HTM" > E N-S</a></li></ul>
+                                            </li><li><a  class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010622016012222EVEE3E.HTM">Fri Eve Open Pairs (F)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000172.4.HTM" > F E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601062160122000172.3.HTM" > F N-S</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li></ul>
+
+
+                    <li><a href="#">Orlando Winter Regional</a>
+                        <ul><li><a href="#">Sun Jan 10, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160110000207.HTM"><u>SWISS</u></a>
+                                        <ul>
+                                            <li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016011010SWISSE1BS.HTM">Orange Blossom Swiss Tms VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160110000207.1.HTM" >Detail</a></li></ul>
+                                            </li>
+                                            <li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016011010SWISSE2BS.HTM">Sunday Strat AXY Swiss VICTORY POINT </a>
+                                                <ul>
+                                                    <li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160110000207.2.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Sat Jan 9, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160109000205.HTM"><u>MIDMOR</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909MIDMORE1M.HTM">Saturday Senior Pairs #O/P OneTwo</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000205.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000205.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000205.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000205.3.HTM" > P N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160109000203.HTM"><u>AFT</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE1A.HTM">Sat AFT AXY Strat Pairs FIRSTTWO (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.13.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.12.HTM" > Z N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE2A.HTM">Sat AFT Side Game Series Sat AFT (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.11.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.10.HTM" > U N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE3A.HTM">Sat Aft 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.1.HTM" > V</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE4A.HTM">Sat Orange Blossom Pairs First (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.5.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.4.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE5A.HTM">Sat Orange Blossom Pairs First (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.7.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.6.HTM" > R N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE6A.HTM">Sat Orange Blossom Pairs First (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.9.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.8.HTM" > T N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909AFTE7A.HTM">Youth Bridge Only (X)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.3.HTM" > X E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000203.2.HTM" > X N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160109000204.HTM"><u>EVE</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909EVEE1E.HTM">Sat A/X/Y Pairs Evening (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.8.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.7.HTM" > Z N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909EVEE2E.HTM">Sat Orange Blossom Pairs Evening (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.2.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.1.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909EVEE3E.HTM">Sat Orange Blossom Pairs Evening (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.4.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.3.HTM" > R N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909EVEE4E.HTM">Sat Orange Blossom Pairs Evening (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.6.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.5.HTM" > T N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909EVEE5E.HTM">Side Game Series II 55 (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000204.9.HTM" > U</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160109000206.HTM"><u>SWISS</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909SWISSE4BS.HTM">Br Swis Teams Br 4 VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000206.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909SWISSE3BS.HTM">Br Swiss Teams Br 3 VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000206.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909SWISSE5BS.HTM">Br Swiss Teams Br 5 VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000206.5.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909SWISSE2BS.HTM">Bracketed Swiss Br 2 VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000206.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909SWISSE1BS.HTM">Sat Bracketed Swiss Br 1 VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000206.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010909SWISSE6BS.HTM">Saturday A/X Swiss Teams VICTORY POINT </a>
+                                                <ul><li class="FR_Link"><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160109000206.6.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Fri Jan 8, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000201.HTM"><u>MIDMOR</u></a>
+                                        <ul><li><a href="#">Fri Senior Pairs #O/P/S Morning</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000201.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000201.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000201.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000201.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000201.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000201.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000197.HTM"><u>AMKO</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808AMKOE1M.HTM">Fri-Sat CKO Bracket 1 COMPACT KO </a>
+                                                <ul><li class="FR_Link"><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000197.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808AMKOE2M.HTM">Fri-Sat CKO Bracket 2 COMPACT KO </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000197.2.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000196.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="#">Fri Aft 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.2.HTM" > V E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.1.HTM" > V N-S</a></li></ul>
+                                            </li><li><a href="#">Friday A/X/Y Pairs #L/M Aft--1st</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.14.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.13.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.16.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.15.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="#">Friday Aft Side Game 2ndFive (N)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.18.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.17.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="#">Friday Orange Blossom Prs Aft--1st (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.4.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.3.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a href="#">Friday Orange Blossom Prs Aft--1st (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.6.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.5.HTM" > R N-S</a></li></ul>
+                                            </li><li><a href="#">Friday Orange Blossom Prs Aft--1st (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.8.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.7.HTM" > T N-S</a></li></ul>
+                                            </li><li><a href="#">Friday Orange Blossom Prs Aft--1st (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.10.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.9.HTM" > U N-S</a></li></ul>
+                                            </li><li><a href="#">Friday Orange Blossom Prs Aft--1st (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.12.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000196.11.HTM" > Z N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000200.HTM"><u>MIDAFT</u></a>
+                                        <ul><li><a href="#">Fri Senior Pairs #O/P/S Afternoon</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000200.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000200.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000200.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000200.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000200.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000200.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000198.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="#">Fri Eve A/X/Y Pairs #L/M Second2</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.12.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.11.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.14.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.13.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="#">Fri Orange Blossom Pairs TwoTwo (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.2.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.1.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a href="#">Fri Orange Blossom Pairs TwoTwo (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.4.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.3.HTM" > R N-S</a></li></ul>
+                                            </li><li><a href="#">Fri Orange Blossom Pairs TwoTwo (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.6.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.5.HTM" > T N-S</a></li></ul>
+                                            </li><li><a href="#">Fri Orange Blossom Pairs TwoTwo (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.8.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.7.HTM" > U N-S</a></li></ul>
+                                            </li><li><a href="#">Fri Orange Blossom Pairs TwoTwo (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.10.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.9.HTM" > Z N-S</a></li></ul>
+                                            </li><li><a href="#">Side Game Series 2 Second5 (K)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000198.15.HTM" > K</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000199.HTM"><u>KO</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808KOE2A.HTM">Fri-Sat KO Bracket 2 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000199.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808KOE3A.HTM">Fri-Sat KO Bracket 3 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000199.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808KOE4A.HTM">Fri-Sat KO Bracket 4 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000199.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="#">Fri-Sat KO Brackey 4 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000199.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808KOE1A.HTM">Fri-Sat Ko Bracket 1 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000199.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160108000202.HTM"><u>SWISS</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010808SWISSE1ES.HTM">Friday Eve Side Swiss VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160108000202.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Thu Jan 7, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000194.HTM"><u>MORN</u></a>
+                                        <ul><li><a href="#">Thu AM 299er Pairs (L)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000194.2.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000194.1.HTM" > L N-S</a></li></ul>
+                                            </li><li><a href="#">Thu AM Fast Pairs (K)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000194.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000194.3.HTM" > K N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000193.HTM"><u>MIDMOR</u></a>
+                                        <ul><li><a href="#">Thur Strat SENIOR Pairs #O/P/S FIRSTTWO</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000193.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000193.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000193.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000193.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000193.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000193.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000189.HTM"><u>AMKO</u></a>
+                                        <ul><li><a href="#">Thurs/Fri CKO - Bracket 1 COMPACT KO </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000189.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="#">Thurs/Fri CKO - Bracket 2 COMPACT KO </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000189.2.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000192.HTM"><u>MIDAFT</u></a>
+                                        <ul><li><a href="#">Thur AFT Senior Pairs #O/P/S SECONDTWO</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000192.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000192.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000192.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000192.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000192.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000192.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000190.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="#">Side Game Series II (1/5) (K)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.15.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.14.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="#">Thu Eve 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.1.HTM" > V</a></li></ul>
+                                            </li><li><a href="#">Thurs A/X/Y Pairs #L/M Second</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.17.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.16.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.19.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.18.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="#">Thurs Orange Blossom Prs Eve - 2nd (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.3.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.2.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a href="#">Thurs Orange Blossom Prs Eve - 2nd (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.5.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.4.HTM" > R N-S</a></li></ul>
+                                            </li><li><a href="#">Thurs Orange Blossom Prs Eve - 2nd (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.7.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.6.HTM" > T N-S</a></li></ul>
+                                            </li><li><a href="#">Thurs Orange Blossom Prs Eve - 2nd (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.9.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.8.HTM" > U N-S</a></li></ul>
+                                            </li><li><a href="#">Thurs Orange Blossom Prs Eve - 2nd (X)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.11.HTM" > X E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.10.HTM" > X N-S</a></li></ul>
+                                            </li><li><a href="#">Thurs Orange Blossom Prs Eve - 2nd (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.13.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000190.12.HTM" > Z N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000191.HTM"><u>KO</u></a>
+                                        <ul><li><a href="#">Thurs-Fri KO - 1 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000191.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="#">Thurs-Fri KO - 2 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000191.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="#">Thurs-Fri KO - 3 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000191.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="#">Thurs-Fri KO - 4 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000191.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="#">Thurs-Fri KO - 5 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000191.5.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160107000195.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="#">Thursday Eve Side Swiss VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160107000195.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Wed Jan 6, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000187.HTM"><u>MORN</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606MORNE1M.HTM">Morning Fast Pairs Series 25 (J)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000187.4.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000187.3.HTM" > J N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606MORNE2M.HTM">Wed AM 299ers One (L)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000187.2.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000187.1.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000186.HTM"><u>MIDMOR</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606MIDMORE1M.HTM">Wed Senior Pairs #O/P/S Morning</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000186.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000186.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000186.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000186.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000186.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000186.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000182.HTM"><u>AMKO</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AMKOE2M.HTM">Weds-Thurs CKO - 2 COMPACT KO </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000182.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AMKOE1M.HTM">Weds-Thurs CKO - I COMPACT KO </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000182.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000181.HTM"><u>AFT</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE1A.HTM">Side Series 1 Wed 35 (N)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.20.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.19.HTM" > N N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE2A.HTM">Wed A/X/Y Pairs #L/M First</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.16.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.15.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.18.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.17.HTM" > M N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE3A.HTM">Wed Aft 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.2.HTM" > V E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.1.HTM" > V N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE4A.HTM">Wednesday Gold Pairs Afternoon (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.4.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.3.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE5A.HTM">Wednesday Gold Pairs Afternoon (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.6.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.5.HTM" > R N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE6A.HTM">Wednesday Gold Pairs Afternoon (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.8.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.7.HTM" > T N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE7A.HTM">Wednesday Gold Pairs Afternoon (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.10.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.9.HTM" > U N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE8A.HTM">Wednesday Gold Pairs Afternoon (X)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.12.HTM" > X E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.11.HTM" > X N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606AFTE9A.HTM">Wednesday Gold Pairs Afternoon (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.14.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000181.13.HTM" > Z N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000185.HTM"><u>MIDAFT</u></a>
+                                        <ul><li><a class="FR_Link" class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606MIDAFTE1A.HTM">Wed Senior Pairs #O/P/S Afternoon</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000185.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000185.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000185.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000185.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000185.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000185.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000183.HTM"><u>EVE</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE1E.HTM">Wed Eve 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.7.HTM" > V</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE3E.HTM">Wed Eve Orange Blossom 2ndTwo (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.11.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.10.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE2E.HTM">Wed Eve Orange Blossom 2ndTwo (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.9.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.8.HTM" > R N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE5E.HTM">Wed Eve Orange Blossom 2ndTwo (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.15.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.14.HTM" > T N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE4E.HTM">Wed Eve Orange Blossom 2ndTwo (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.13.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.12.HTM" > U N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE7E.HTM">Wed Eve Orange Blossom 2ndTwo (X)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.19.HTM" > X E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.18.HTM" > X N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE6E.HTM">Wed Eve Orange Blossom 2ndTwo (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.17.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.16.HTM" > Z N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE8E.HTM">Wed Eve Side Game FourFive (N)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.6.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.5.HTM" > N N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606EVEE9E.HTM">Wednesday AXY Pairs #L/M TwoTwo</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.2.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.1.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.4.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000183.3.HTM" > M N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000188.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="#">Wed Eve Swiss VICTORY POINT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000188.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160106000184.HTM"><u>KO</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606KOE1A.HTM">Wed-Thur KO 1 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000184.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606KOE2A.HTM">Wed-Thur KO 2 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000184.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606KOE3A.HTM">Wed-Thur KO 3 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000184.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606KOE4A.HTM">Wed-Thur KO 4 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000184.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010606KOE5A.HTM">Wed-Thur KO 5 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160106000184.5.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Tue Jan 5, 2016</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160105000179.HTM"><u>MORN</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505MORNE1M.HTM">Morning Fast Pairs Tues (1/5) (J)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000179.4.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000179.3.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505MORNE2M.HTM">Tues AM 299ers Only (L)</a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000179.2.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000179.1.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li>
+                                    <li>
+                                        <a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/D091601010160105000178.HTM"><u>MIDMOR</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505MIDMORE1M.HTM">Tues Senior Pairs #O/P/S Morning</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000178.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000178.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000178.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000178.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000178.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000178.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160105000174.HTM"><u>AFT</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE1A.HTM">Aft Side Game Series First5 (N)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.18.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.17.HTM" > N N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE2A.HTM">Tues A/X/Y Pairs #L/M First2</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.14.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.13.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.16.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.15.HTM" > M N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE3A.HTM">Tues Aft 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.2.HTM" > V E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.1.HTM" > V N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE4A.HTM">Tuesday Orange Blossom First (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.4.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.3.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE5A.HTM">Tuesday Orange Blossom First (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.6.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.5.HTM" > R N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE6A.HTM">Tuesday Orange Blossom First (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.8.HTM" > T E-W</a></li><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.7.HTM" > T N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE7A.HTM">Tuesday Orange Blossom First (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.10.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.9.HTM" > U N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505AFTE8A.HTM">Tuesday Orange Blossom First (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.12.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000174.11.HTM" > Z N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160105000177.HTM"><u>MIDAFT</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505MIDAFTE1A.HTM">Tues Senior Pairs #O/P/S Afternoon</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000177.2.HTM" > O E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000177.1.HTM" > O N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000177.4.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000177.3.HTM" > P N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000177.6.HTM" > S E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000177.5.HTM" > S N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/D091601010160105000175.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE1E.HTM">Side Game Series I 25 (N)</a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.18.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.17.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE2E.HTM">Tues A/X/Y Pairs #L/M Eve--2nd</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.14.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.13.HTM" > L N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.16.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.15.HTM" > M N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE3E.HTM">Tues Eve 299ers Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.2.HTM" > V E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.1.HTM" > V N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE4E.HTM">Tues Orange Blossom Prs 2nd Session (Q)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.4.HTM" > Q E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.3.HTM" > Q N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE8E.HTM">Tues Orange Blossom Prs 2nd Session (R)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.12.HTM" > R E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.11.HTM" > R N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE5E.HTM">Tues Orange Blossom Prs 2nd Session (T)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.6.HTM" > T E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.5.HTM" > T N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE6E.HTM">Tues Orange Blossom Prs 2nd Session (U)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.8.HTM" > U E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.7.HTM" > U N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505EVEE7E.HTM">Tues Orange Blossom Prs 2nd Session (Z)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.10.HTM" > Z E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000175.9.HTM" > Z N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160105000180.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505SWISSE1ES.HTM">Tue Eve Side Swiss VICTORY POINT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000180.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160105000176.HTM"><u>KO</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505KOE1A.HTM">Tues/Wed KO - Bracket 1 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000176.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505KOE2A.HTM">Tues/Wed KO - Bracket 2 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000176.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505KOE3A.HTM">Tues/Wed KO - Bracket 3 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000176.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505KOE4A.HTM">Tues/Wed KO - Bracket 4 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000176.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505KOE5A.HTM">Tues/Wed KO - Bracket 5 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000176.5.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010505KOE6A.HTM">Tues/Wed KO - Bracket 6 KNOCK OUT </a>
+                                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160105000176.6.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Mon Jan 4, 2016</a>
+                                <ul><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/D091601010160104000171.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404AFTE1A.HTM">Mon AFT 299er Pairs Only (J)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.4.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.3.HTM" > J N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404AFTE2A.HTM">Mon AFT BOGO Pairs #K/L 1:00 PM</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.6.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.5.HTM" > K N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.8.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.7.HTM" > L N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404AFTE3A.HTM">Mon AFT BOGO Pairs #M/N 1:00 PM</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.10.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.9.HTM" > M N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.12.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.11.HTM" > N N-S</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404AFTE4A.HTM">Mon Aft 0-20 Free Pairs Only (V)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.2.HTM" > V E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000171.1.HTM" > V N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091601010160104000172.HTM"><u>EVE</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404EVEE1E.HTM">Mon Eve Charity Pairs #J/K 7:00 PM</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000172.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000172.1.HTM" > J N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000172.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000172.3.HTM" > K N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a class="FR_Link"  href="http://bridgefinesse.com/FastResults/Library/D091601010160104000173.HTM"><u>KO</u></a>
+                                        <ul><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404KOE1E.HTM">Mon-Tues KO Bracket 1 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000173.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404KOE2E.HTM">Mon-Tues KO Bracket 2 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000173.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a class="FR_Link" href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0916010102016010404KOE3E.HTM">Mon-Tues KO Bracket 3 KNOCK OUT </a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091601010160104000173.3.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li></ul>
+
+                    <li><a href="#">Ft/Lauderdale Regional<br>Regional</a>
+                        <ul><li><a href="#">Sun Dec 20, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151220000197.HTM"><u>SWISS</u></a></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015122020SWISSE1BS.HTM"><font color="red">Sunday A/X Swiss VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151220000197.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015122020SWISSE2BS.HTM"><font color="red">Sunday B/C/D Swiss VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151220000197.2.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Sat Dec 19, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151219000195.HTM"><u>MORN</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919MORNE1M.HTM"><font color="red">Sat A/X/Y Pairs 1st (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000195.2.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000195.1.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919MORNE2M.HTM"><font color="red">Sat Gold Rush Pairs 1st (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000195.4.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000195.3.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919MORNE3M.HTM"><font color="red">Sat Gold Rush Pairs 1st (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000195.6.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000195.5.HTM" > K N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151219000193.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919AFTE1A.HTM"><font color="red">Sat A/X/Y Pairs 2nd (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.6.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.5.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919AFTE2A.HTM"><font color="red">Sat A/X/Y Pairs 2nd (P)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.8.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.7.HTM" > P N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919AFTE3A.HTM"><font color="red">Sat Gold Rush Pairs 2nd (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.1.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919AFTE4A.HTM"><font color="red">Sat Gold Rush Pairs 2nd (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000193.3.HTM" > K N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151219000194.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919EVEE1E.HTM"><font color="red">Saturday Eve Side Game 66 (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000194.1.HTM" > N</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151219000196.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919SWISSE1MS.HTM"><font color="red">Bracketed Swiss Bracket 1 VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000196.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919SWISSE2MS.HTM"><font color="red">Bracketed Swiss Bracket 2 VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000196.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919SWISSE3MS.HTM"><font color="red">Bracketed Swiss Bracket 3 VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000196.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919SWISSE4MS.HTM"><font color="red">Bracketed Swiss Bracket 4 VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000196.4.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121919SWISSE5MS.HTM"><font color="red">Bracketed Swiss Bracket 5 VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151219000196.5.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Fri Dec 18, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151218000192.HTM"><u>MORN</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818MORNE1M.HTM"><font color="red">Fri Morn A/X/Y Pairs Friday Morn (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.2.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.1.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818MORNE2M.HTM"><font color="red">Fri Morn A/X/Y Pairs Friday Morn (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.4.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.3.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818MORNE3M.HTM"><font color="red">Fri Morn A/X/Y Pairs Friday Morn (P)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.12.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.11.HTM" > P N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818MORNE4M.HTM"><font color="red">Fri Morn Gold Rush Pairs Friday Morn (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.6.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.5.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818MORNE5M.HTM"><font color="red">Fri Morn Gold Rush Pairs Friday Morn (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.8.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.7.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818MORNE6M.HTM"><font color="red">Fri Morn Gold Rush Pairs Friday Morn (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.10.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000192.9.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151218000189.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE1A.HTM"><font color="red">Fri Aft A/X/Y Pairs Friday Aft (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.9.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.8.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE2A.HTM"><font color="red">Fri Aft A/X/Y Pairs Friday Aft (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.11.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.10.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE3A.HTM"><font color="red">Fri Aft A/X/Y Pairs Friday Aft (P)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.13.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.12.HTM" > P N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE4A.HTM"><font color="red">Fri Aft Gold Rush Pairs Thursday Aft (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.3.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.2.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE5A.HTM"><font color="red">Fri Aft Gold Rush Pairs Thursday Aft (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.5.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.4.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE6A.HTM"><font color="red">Fri Aft Gold Rush Pairs Thursday Aft (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.7.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.6.HTM" > L N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818AFTE1AS.HTM"><font color="red">Fri Aft Strat Swiss Teams VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000189.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151218000190.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818EVEE1E.HTM"><font color="red">Friday Eve Side Game 5of 6 (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000190.1.HTM" > N</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151218000191.HTM"><u>KO</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818KOE1M.HTM"><font color="red">Fri Sat KO Bracket 1 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000191.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121818KOE2M.HTM"><font color="red">Fri Sat KO Bracket 2 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151218000191.2.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Thu Dec 17, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151217000187.HTM"><u>MORN</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717MORNE2M.HTM"><font color="red">Thursday A/X/Y Pairs Thursday Morn (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.8.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.7.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717MORNE1M.HTM"><font color="red">Thursday A/X/Y Pairs Thursday Morn (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.6.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.5.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717MORNE3M.HTM"><font color="red">Thursday Gold Rush Pairs Thursday Morn (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.1.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717MORNE4M.HTM"><font color="red">Thursday Gold Rush Pairs Thursday Morn (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.3.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717MORNE5M.HTM"><font color="red">Thursday Gold Rush Pairs Thursday Morn (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.10.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000187.9.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151217000185.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717AFTE1A.HTM"><font color="red">Thur AFT A/X/Y Second2 (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.8.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.7.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717AFTE2A.HTM"><font color="red">Thur AFT A/X/Y Second2 (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.10.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.9.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717AFTE3A.HTM"><font color="red">Thur AFT Gold Rush Pairs Second2 (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.1.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717AFTE4A.HTM"><font color="red">Thur AFT Gold Rush Pairs Second2 (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.3.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717AFTE5A.HTM"><font color="red">Thur AFT Gold Rush Pairs Second2 (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.6.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000185.5.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151217000186.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717EVEE1E.HTM"><font color="red">Thur Eve Side Series 4 (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000186.2.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000186.1.HTM" > N N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151217000188.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717SWISSE1BS.HTM"><font color="red">Stratified Open Swiss VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000188.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717SWISSE2BS.HTM"><font color="red">Stratified Senior Swiss VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000188.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121717SWISSE3BS.HTM"><font color="red">Thur AFT Side Swiss Teams VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151217000188.3.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Wed Dec 16, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151216000183.HTM"><u>MORN</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616MORNE1M.HTM"><font color="red">Wed AM A/X/Y Pairs #M/N 1st2</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.8.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.7.HTM" > M N-S</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.10.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.9.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616MORNE5M.HTM"><font color="red">Wed AM Gold Rush Pairs 1st2 (I)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.12.HTM" > I E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.11.HTM" > I N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616MORNE2M.HTM"><font color="red">Wed AM Gold Rush Pairs 1st2 (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.1.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616MORNE3M.HTM"><font color="red">Wed AM Gold Rush Pairs 1st2 (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.3.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616MORNE4M.HTM"><font color="red">Wed AM Gold Rush Pairs 1st2 (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.6.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000183.5.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151216000180.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE1A.HTM"><font color="red">WED AFT Side Game Series 3:00 PM (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.13.HTM" > M</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE4A.HTM"><font color="red">Wed AFT Gold Rush Pairs SECONDTWO (I)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.6.HTM" > I E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.5.HTM" > I N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE2A.HTM"><font color="red">Wed AFT Gold Rush Pairs SECONDTWO (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.1.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE3A.HTM"><font color="red">Wed AFT Gold Rush Pairs SECONDTWO (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.3.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE5A.HTM"><font color="red">Wed AFT Gold Rush Pairs SECONDTWO (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.8.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.7.HTM" > L N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE6A.HTM"><font color="red">Wed Strat A/X/Y Pairs SECONDTWO (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.10.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.9.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616AFTE7A.HTM"><font color="red">Wed Strat A/X/Y Pairs SECONDTWO (P)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.12.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000180.11.HTM" > P N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151216000181.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616EVEE1E.HTM"><font color="red">Evening Side Game Series Third6 (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000181.2.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000181.1.HTM" > N N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151216000184.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616SWISSE1AS.HTM"><font color="red">Wed AFT Swiss Teams VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000184.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151216000182.HTM"><u>KO</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616KOE1M.HTM"><font color="red">Wed-Thu Knockouts #1 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000182.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616KOE2M.HTM"><font color="red">Wed-Thu Knockouts #2 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000182.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121616KOE3M.HTM"><font color="red">Wed-Thu Knockouts #3 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151216000182.3.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Tue Dec 15, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151215000178.HTM"><u>MORN</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515MORNE1M.HTM"><font color="red">Tues AM A/X/Y Pairs 1st (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.8.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.7.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515MORNE2M.HTM"><font color="red">Tues AM A/X/Y Pairs 1st (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.10.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.9.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515MORNE3M.HTM"><font color="red">Tues AM Gold Rush Pairs 1st (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.1.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515MORNE4M.HTM"><font color="red">Tues AM Gold Rush Pairs 1st (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.4.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.3.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515MORNE5M.HTM"><font color="red">Tues AM Gold Rush Pairs 1st (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.6.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000178.5.HTM" > L N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151215000175.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515AFTE1A.HTM"><font color="red">Tue A/X/Y Pairs SECONDTWO (M)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.8.HTM" > M E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.7.HTM" > M N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515AFTE2A.HTM"><font color="red">Tue A/X/Y Pairs SECONDTWO (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.10.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.9.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515AFTE5A.HTM"><font color="red">Tue AFT Gold Rush Pairs SECONDTWO (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.6.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.5.HTM" > J N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515AFTE3A.HTM"><font color="red">Tue AFT Gold Rush Pairs SECONDTWO (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.2.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.1.HTM" > K N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515AFTE4A.HTM"><font color="red">Tue AFT Gold Rush Pairs SECONDTWO (L)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.4.HTM" > L E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.3.HTM" > L N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515AFTE6A.HTM"><font color="red">Tues AFT Side Game Series 3:00 PM (I)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.12.HTM" > I E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000175.11.HTM" > I N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151215000176.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515EVEE1E.HTM"><font color="red">Tue EVE Side Game Series 7:30 PM (K)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000176.2.HTM" > K E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000176.1.HTM" > K N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151215000177.HTM"><u>KO</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515KOE3M.HTM"><font color="red">Tue-Wed KO Beacket 3 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000177.3.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515KOE2M.HTM"><font color="red">Tue-Wed KO Bracket 2 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000177.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515KOE1M.HTM"><font color="red">Tues-Wed KO Bracket 1 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000177.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151215000179.HTM"><u>SWSS</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121515SWSSE1AS.HTM"><font color="red">Tuesday Aft Single Swiss VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151215000179.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li><li><a href="#">Mon Dec 14, 2015</a>
+                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151214000171.HTM"><u>AFT</u></a>
+                                        <ul><li><a href="#">Mon Aft 0-20 Pairs Only (P)</a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.8.HTM" > P E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.7.HTM" > P N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414AFTE1A.HTM"><font color="red">Mon Aft Side Game 1st6 (I)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.6.HTM" > I E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.5.HTM" > I N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414AFTE2A.HTM"><font color="red">Monday A/X/Y Pairs First (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.2.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.1.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414AFTE3A.HTM"><font color="red">Monday Gold Pairs First (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.4.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000171.3.HTM" > J N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151214000172.HTM"><u>EVE</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414EVEE1E.HTM"><font color="red">Eve Side Game Series First6 (I)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000172.6.HTM" > I E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000172.5.HTM" > I N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414EVEE2E.HTM"><font color="red">Mon Eve A/X/Y Pairs Second2 (N)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000172.4.HTM" > N E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000172.3.HTM" > N N-S</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414EVEE3E.HTM"><font color="red">Monday Gold Pairs Second (J)</font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000172.2.HTM" > J E-W</a></li><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000172.1.HTM" > J N-S</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151214000174.HTM"><u>SWISS</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414SWISSE1BS.HTM"><font color="red">Mon-Tue Evening Swiss VICTORY POINT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000174.1.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li><li><a href="http://bridgefinesse.com/FastResults/Library/D091512014151214000173.HTM"><u>KO</u></a>
+                                        <ul><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414KOE1A.HTM"><font color="red">Mon-Tue KO Bracket 1 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000173.1.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414KOE2A.HTM"><font color="red">Mon-Tue KO Bracket 2 KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000173.2.HTM" >Detail</a></li></ul>
+                                            </li><li><a href="http://bridgefinesse.com/FastResults/Library/ACBLMerge/D0915120142015121414KOE3A.HTM"><font color="red">Mon-Tue KO KNOCK OUT </font></a></a>
+                                                <ul><li><a href="http://bridgefinesse.com/FastResults/Library/SubSessions/D091512014151214000173.3.HTM" >Detail</a></li></ul>
+                                            </li></ul>
+                                    </li></ul>
+                            </li></ul>
+
+
+
+
+
+<!--                    <li><a href="#">Choose Another District</a>
+                        <ul>
+                            <li><a href="http://bridgefinesse.com/fastresults/D1">D1</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D2">D2</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D3">D3</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D4">D4</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D5">D5</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D6">D6</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D7">D7</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D8">D8</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D9">D9</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D10">D10</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D11">D11</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D12">D12</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D13">D13</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D14">D14</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D15">D15</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D16">D16</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D18">D18</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D19">D19</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D20">D20</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D21">D21</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D22">D22</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D23">D23</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D24">D24</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D25">D25</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D99">D99</a></li>
+
+                        </ul>
+
+                    </li>-->
+
+
+<li><a href="#">Daytona Regional</a>
+                        <ul>
+                            <li><a href="#">Sun Jan 24, 2016</a>
+                                <ul>
+                                    <li><a href="#">Swiss</a>
+                                        <ul>
+                                            <li><a href="#">Sunday Victory Points</a>
+                                                <ul>
+                                                    <li><a href="#">Detail</a></li>
+                                                    <li><a href="#">Item 2-3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Saturday</a>
+                                <ul>
+                                    <li> <a href="http://bridgefinesse.com/FastResults/Library/D091601062160123000174.HTM"><u>MORN</u></a>
+                                        <ul>
+                                            <li><a href="#">Sat Open Pairs #E/F</a>
+                                                <ul>
+                                                    <li>E E-W</li>
+                                                    <li>E N-S</li>
+                                                    <li>F E-W</li>
+                                                    <li>F N-S</li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Saturday 299er Pairs (A)</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#"><u>Afternoon</u></a>
+                                        <ul>
+                                            <li>ddddd</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Friday</a>
+                                <ul>
+                                    <li> <a href="#"><u>Afternoon</u></a>
+                                        <<li> <a href="#"><u>Evening</u></a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+                    <li><a href="#">Naples Regional</a>
+                        <ul>
+                            <li><a href="#">Sun Jan 24, 2016</a>
+                                <ul>
+                                    <li><a href="#">Swiss</a>
+                                        <ul>
+                                            <li><a href="#">Sunday Victory Points</a>
+                                                <ul>
+                                                    <li><a href="#">Detail</a></li>
+                                                    <li><a href="#">Item 2-3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Saturday</a>
+                                <ul>
+                                    <li> <a href="http://bridgefinesse.com/FastResults/Library/D091601062160123000174.HTM"><u>MORN</u></a>
+                                        <ul>
+                                            <li><a href="#">Sat Open Pairs #E/F</a>
+                                                <ul>
+                                                    <li>E E-W</li>
+                                                    <li>E N-S</li>
+                                                    <li>F E-W</li>
+                                                    <li>F N-S</li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Saturday 299er Pairs (A)</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#"><u>Afternoon</u></a>
+                                        <ul>
+                                            <li>ddddd</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Friday</a>
+                                <ul>
+                                    <li> <a href="#"><u>Afternoon</u></a>
+                                        <<li> <a href="#"><u>Evening</u></a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+                <div class="quoteContainer">
+                    <div class="row">
+
+                        <div class="centered col-md-10 col-md-offset-1">
+                            <blockquote class="style3">
+                                <span class="firstcharacter">Y</span>ou should play the game for fun. The instant you find yourself playing the game for any other reason,
+                                you should rack it up and go on to something else--court tennis, maybe, or old maid. Anything but bridge.<br>Charles Goren
+
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <br><br><hr>
+
+            <div class="table-responsive">
+                <div id="footer">
+
+                    <center>
+                        <h2> Sponsored by ACBL District 9 - FLorida</h2>
+                    </center>
+                    <center>
+                        <h2> Powered by <a href="http://thecommongame.com">TheCommonGame.com</a>
+                        </h2>
+                    </center>
+                    <div class="table-responsive">
+                        <center>
+                            <a href="/FastResults/FRFAQ.html" ><span style="font-size:medium">FAQ</span></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="mailto:FastResultsHelpDesk@gmail.com?subject=Requesting Help on D9 Fast Results" ><span style="font-size:medium; ">Need More Help?</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="http://district9acbl.org/D9_Tournaments/2013_reg.htm"><span style="font-size:medium; ">D9 Regional Final Results</span></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="http://bridgefinesse.com/fastresults/D9/dailybulletins/"><span style="font-size:medium; ">Daily Bulletins</span></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="http://bridgefinesse.com/fastresults/FRSetup.html"><span style="font-size:medium; ">Upcoming FR Tournaments </span></a>
+                        </center>
+                    </div>
+                    <div class=" districts table-responsive">
+                        (More Districts:
+                        <a href="http://bridgefinesse.com/fastresults/D1">D1</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D2">D2</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D3">D3</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D4">D4</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D5">D5</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D6">D6</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D7">D7</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D8">D8</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D9">D9</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D10">D10</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D11">D11</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D12">D12</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D13">D13</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D14">D14</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D15">D15</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D16">D16</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D18">D18</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D19">D19</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D20">D20</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D21">D21</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D22">D22</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D23">D23</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D24">D24</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D25">D25</a>&nbsp;
+                        <a href="http://bridgefinesse.com/fastresults/D99">D99</a>)
+                    </div>
+
+                </div>
+            </div>
+
+
+<!--<ul id="main-menuT" class="sm sm-blue">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a>
+    <ul>
+      <li><a href="#">Item 2-1</a></li>
+      <li><a href="#">Item 2-2</a></li>
+      <li><a href="#">Item 2-3</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 3</a></li>
+</ul>-->
+
+
+
+
+
+<!--            <br>
+            <nav id="main-nav2" role="navigation">
+                <ul id="main-menu2" class="sm sm-blue">
+
+                    <li><a href="#">Choose Another District</a>
+                        <ul>
+                            <li><a href="http://bridgefinesse.com/fastresults/D1">D1</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D2">D2</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D3">D3</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D4">D4</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D5">D5</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D6">D6</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D7">D7</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D8">D8</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D9">D9</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D10">D10</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D11">D11</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D12">D12</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D13">D13</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D14">D14</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D15">D15</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D16">D16</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D18">D18</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D19">D19</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D20">D20</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D21">D21</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D22">D22</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D23">D23</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D24">D24</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D25">D25</a></li>
+                            <li><a href="http://bridgefinesse.com/fastresults/D99">D99</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            After
+            <br>-->
+
+
+
+            <script type="text/javascript"> 	var menu = new menu.dd("menu");
+                menu.init("menu", "menuhover");</script>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+
